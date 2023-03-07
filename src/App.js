@@ -1,11 +1,13 @@
 import React from 'react';
 
+import { useState, useEffect } from 'react';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.css';
 
 import ThemeProvider from 'react-bootstrap/ThemeProvider';
-import Example from './components/article-components/FullWidthHero/Example';
+import FullWidthHero from './components/article-components/FullWidthHero/FullWidthHero';
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
     breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
     minBreakpoint="xxs"
   >
-    <Example />
+    <FullWidthHero />
   </ThemeProvider>
   );
 }
