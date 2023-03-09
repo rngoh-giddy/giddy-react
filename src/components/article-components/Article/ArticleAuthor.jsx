@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function ArticleAuthor({ author }) {
+export default function ArticleAuthor({ author, published }) {
   return (
-    <p>{author?.name}</p>
+    <p>Written by: {author?.name} | Published {published} </p>
   )
 }

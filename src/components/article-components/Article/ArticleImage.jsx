@@ -1,7 +1,8 @@
 import React from 'react'
+import Image from 'react-bootstrap/Image'
 
 export default function ArticleImage({ image }) {
   return (
-    <img src={`${image}`} alt="" />
+    <Image rounded='10px' fluid src={`${image}`} alt="" />
   )
 }

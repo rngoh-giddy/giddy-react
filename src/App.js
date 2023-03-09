@@ -10,6 +10,8 @@ import Article from './components/article-components/Article/Article';
 
 import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import FullWidthHero from './components/article-components/FullWidthHero/FullWidthHero';
+import MainNav from './components/nav-bar-components/main-nav/main-nav';
+import MainFooter from './components/footer-components/main-footer/MainFooter';
 
 function App() {
   return (
@@ -17,10 +19,13 @@ function App() {
     breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
     minBreakpoint="xxs"
   >
+    <MainNav />
     <Routes>
       <Route path="/article/:id" element={<Article />} />
+      <Route path="/article/ms/:id" element={<Article />} />
+      <Route path="/article/fi/:id" element={<Article />} />
     </Routes>
-    <FullWidthHero />
+    <MainFooter/>
   </ThemeProvider>
   );
 }
