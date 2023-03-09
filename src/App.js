@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 import Article from './components/article-components/Article/Article';
+import MSArticle from './components/article-components/MSNBC-Article/MSArticle';
 
 import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import FullWidthHero from './components/article-components/FullWidthHero/FullWidthHero';
@@ -22,7 +23,7 @@ function App() {
     <MainNav />
     <Routes>
       <Route path="/article/:id" element={<Article />} />
-      <Route path="/article/ms/:id" element={<Article />} />
+      <Route path="/article/ms/:id" element={<MSArticle />} />
       <Route path="/article/fi/:id" element={<Article />} />
     </Routes>
     <MainFooter/>
