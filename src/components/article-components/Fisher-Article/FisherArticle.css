@@ -32,6 +32,10 @@
     padding-bottom: 1%;
   }
 
+  .Article-Author p{
+    margin-bottom: 7px;
+  }
+
 .fw-bold{
     font-weight: 700;
 }
