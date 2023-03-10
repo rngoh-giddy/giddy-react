@@ -7,12 +7,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+// Fisher Article Components
 import ArticleHeader from "../Article/ArticleHeader";
-import ArticleAuthor from "../Article/ArticleAuthor";
+import FisherArticleAuthor from "./FisherArticleAuthor";
 import ArticleImage from "../Article/ArticleImage";
 import ArticleText from "../Article/ArticleText";
 import ArticleDeck from "../Article/ArticleDeck";
-import "./FisherArticle.css"
+
+// Fisher Article CSS
+import "./FisherArticle.css";
 
 export default function Article() {
   const [article, setArticle] = useState([]);
@@ -35,9 +38,7 @@ export default function Article() {
   return (
     <>
       <Container fluid>
-        <Row>
-          
-        </Row>
+        <Row></Row>
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
@@ -53,19 +54,34 @@ export default function Article() {
         <Row>
           <Col sm={3}></Col>
           <Col sm={6}>
-            <div className="Article-Author col-sm-3">{article?.author && <ArticleAuthor author={author} published={article.published} />}</div>
-            <div className="Article-Hero">{article?.image && <ArticleImage image={image} />}</div>
-            <div className="Article-Body">{article?.body && <ArticleText body={body} />}</div>
+            <div className="Article-Author col-sm-3">
+              {article?.author && (
+                <FisherArticleAuthor
+                  author={author}
+                  published={article.published}
+                />
+              )}
+            </div>
+            <div className="Article-Hero">
+              {article?.image && <ArticleImage image={image} />}
+            </div>
+            <div className="Article-Body">
+              {article?.body && <ArticleText body={body} />}
+            </div>
           </Col>
           <Col sm={3}></Col>
         </Row>
         <Row>
           <Container>
-            <hr/>
+            <hr />
             <Row>
               <Col sm={3}>
-              <p className="text-gray">Author: {article?.author && article.author.name}</p>
-              <p className="text-gray">Published: {article?.published && article.published}</p>
+                <p className="text-gray">
+                  Author: {article?.author && article.author.name}
+                </p>
+                <p className="text-gray">
+                  Published: {article?.published && article.published}
+                </p>
               </Col>
               <Col sm={9}>
                 <p className="font-size-20 fw-bold">Share this article</p>
@@ -75,13 +91,13 @@ export default function Article() {
             <Row className="fw-bold">
               <p>Browse by tag:</p>
             </Row>
-            <hr/>
+            <hr />
           </Container>
         </Row>
         <Row>
           <Container>
             <p>Related Articles</p>
-            <hr/>
+            <hr />
           </Container>
         </Row>
       </Container>
