@@ -34,7 +34,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 To view minified files, refactor them but do not save them. Minified improves load speed.
 
 ## Project Notes:
-
+* `npx markdown-notes-tree --noSubdirectoryTrees` will add an updated folder tree to a readme file inside the src folder. Copy it, paste it over the tree in the parent README.md file and delete the generated readme in the src folder.
 * Add any new Routes to App.js
 * Add any new reusable components to the relevant folder inside /src/components/
 * Each Route and Components should have its own css file whose name starts with the relevant name
