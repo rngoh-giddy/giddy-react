@@ -38,26 +38,27 @@ GIDDY-REACT/
 ├── package.json
 ├── package-lock.json
 ├── public/
-│ ├── favicon.ico
-│ ├── index.html
-│ ├── manifest.json
-│ └── robots.txt
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
 └── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── article-components/
-│ │ ├── footer-components/
-│ │ └── nav-bar-components/
-│ ├── routs/
-│ │ ├── Esquire-Article/
-│ │ ├── Fisher-Article/
-│ │ └── MSNBC-Article/
-│ ├── App.css
-│ ├── App.js
-│ ├── App.test.js
-│ ├── FontSize.min.css
-│ ├── index.css
-│ ├── index.js
-│ ├── reportWebVitals.js
-│ ├── setupTests.js
-│ └── SlateIvyFonts.min.css
+    ├── assets/
+    ├── components/
+    │   ├── article-components/
+    │   ├── footer-components/
+    │   └── nav-bar-components/
+    ├── routes/
+    │   ├── Esquire-Article/
+    │   ├── Fisher-Article/
+    │   └── MSNBC-Article/
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── FontSize.min.css
+    ├── index.css
+    ├── index.js
+    ├── reportWebVitals.js
+    ├── setupTests.js
+    └── SlateIvyFonts.min.css
+
