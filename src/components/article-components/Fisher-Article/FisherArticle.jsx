@@ -63,12 +63,16 @@ export default function Article() {
               )}
             </div>
             <Row>
-              <div className="Article-Hero">
-                {article?.image && <ArticleImage image={image} />}
-              </div>
-              <div className="Article-Body">
-                {article?.body && <ArticleText body={body} />}
-              </div>
+              <Col className="order-2 order-xl-1" xl={6}>
+                <div className="Article-Body">
+                  {article?.body && <ArticleText body={body} />}
+                </div>
+              </Col>
+              <Col className="order-1 order-xl-2" xl={6}>
+                <div className="Article-Hero">
+                  {article?.image && <ArticleImage image={image} />}
+                </div>
+              </Col>
             </Row>
           </Col>
           <Col sm={3}></Col>

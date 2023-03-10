@@ -42,6 +42,10 @@
     margin-bottom: 7px;
   }
 
+  .Article-Body h2{
+    text-align: left;
+  }
+
 .fw-bold{
     font-weight: 700;
 }
