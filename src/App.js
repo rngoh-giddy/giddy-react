@@ -10,7 +10,7 @@ import Article from "./components/article-components/Article";
 
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import FullWidthHero from "./components/article-components/FullWidthHero/FullWidthHero";
-import MainNav from "./components/nav-bar-components/main-nav/main-nav";
+import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import MainFooter from "./components/footer-components/main-footer/MainFooter";
 import FisherArticle from "./routes/Fisher-Article/FisherArticle";
 

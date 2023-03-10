@@ -12,6 +12,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Image from "react-bootstrap/Image";
 
+import "./MainNav.css";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -29,14 +31,14 @@ export default function MainNav() {
   return (
     <Container fluid>
       <Row>
-        <Navbar key="lg" sticky="top" className="mb-3 Site-nav">
+        <Navbar key="lg" sticky="top" className="mb-3 site-nav">
           <Container fluid>
             <Navbar.Brand href="/">
               <Image
                 fluid
                 src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/GMG_Logo.svg"
                 fill="currentColor"
-                className="Site-logo"
+                className="site-logo"
               ></Image>
             </Navbar.Brand>
             <NavDropdown

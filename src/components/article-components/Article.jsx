@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import "./Article.css";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -56,10 +58,10 @@ export default function Article() {
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
-            <div className="Article-Title">
+            <div className="article-title">
               {article?.title && <ArticleHeader title={title} />}
             </div>
-            <div className="Article-Deck">
+            <div className="article-deck">
               {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
@@ -68,15 +70,15 @@ export default function Article() {
         <Row>
           <Col sm={3}></Col>
           <Col sm={6}>
-            <div className="Article-Author">
+            <div className="article-author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
               )}
             </div>
-            <div className="Article-Hero">
+            <div className="article-hero">
               {article?.image && <ArticleImage image={image} />}
             </div>
-            <div className="Article-Body">
+            <div className="article-body">
               {article?.body && <ArticleText body={body} />}
             </div>
           </Col>
