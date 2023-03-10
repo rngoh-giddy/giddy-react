@@ -30,8 +30,16 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Font Instructions
 
-Check App.css for font imports of FontSize.min.css and SlateIvyFonts.min.css
+* Check App.css for font imports of FontSize.min.css and SlateIvyFonts.min.css
 To view minified files, refactor them but do not save them. Minified improves load speed.
+
+## Project Notes:
+
+* Add any new Routes to App.js
+* Add any new re-usable components to the relevant folder inside /src/components/
+* Each Route and Components should have its own css file who's name starts with the relevant name
+* For components and their css files, use CamelCase
+* Folder names stay lower case and dash seperated 
 
 ## Folder Tree
 
@@ -52,4 +60,3 @@ To view minified files, refactor them but do not save them. Minified improves lo
     - [**routes**](src/routes)
         - [**Fisher-Article**](src/routes/Fisher-Article)
         - [**MSNBC-Article**](src/routes/MSNBC-Article)
-

@@ -9,10 +9,9 @@ import "./App.css";
 import Article from "./components/article-components/Article";
 
 import ThemeProvider from "react-bootstrap/ThemeProvider";
-import FullWidthHero from "./components/article-components/FullWidthHero/FullWidthHero";
 import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import MainFooter from "./components/footer-components/main-footer/MainFooter";
-import FisherArticle from "./routes/Fisher-Article/FisherArticle";
+import FisherArticle from "./routes/fisher-article/FisherArticle";
 
 function App() {
   return (
