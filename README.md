@@ -31,7 +31,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 Check App.css for font imports of FontSize.min.css and SlateIvyFonts.min.css
 To view minified files, refactor them but do not save them. Minified improves load speed.
 
-``GIDDY-REACT/
+GIDDY-REACT/
 |-- README.md
 |-- .gitignore
 |-- node_modules/
@@ -60,5 +60,4 @@ To view minified files, refactor them but do not save them. Minified improves lo
     ├── index.js
     ├── reportWebVitals.js
     ├── setupTests.js
-    └── SlateIvyFonts.min.css``
-
+    └── SlateIvyFonts.min.css
