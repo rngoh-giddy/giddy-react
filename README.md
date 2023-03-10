@@ -36,10 +36,10 @@ To view minified files, refactor them but do not save them. Minified improves lo
 ## Project Notes:
 
 * Add any new Routes to App.js
-* Add any new re-usable components to the relevant folder inside /src/components/
-* Each Route and Components should have its own css file who's name starts with the relevant name
+* Add any new reusable components to the relevant folder inside /src/components/
+* Each Route and Components should have its own css file whose name starts with the relevant name
 * For components and their css files, use CamelCase
-* Folder names stay lower case and dash seperated 
+* Folder names stay lowercase and dash separated 
 
 ## Folder Tree
 
