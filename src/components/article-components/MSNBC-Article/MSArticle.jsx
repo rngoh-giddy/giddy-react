@@ -8,12 +8,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import ArticleHeader from "../Article/ArticleHeader";
-import ArticleAuthor from "../Article/ArticleAuthorStack";
+import ArticleAuthor from "./ArticleAuthorStack";
 import ArticleImage from "../Article/ArticleImage";
 import ArticleText from "../Article/ArticleText";
 import ArticleDeck from "../Article/ArticleDeck";
 
-import './MSArticle.css';
+import "./MSArticle.css";
 
 export default function MSArticle() {
   const [article, setArticle] = useState([]);
@@ -36,7 +36,6 @@ export default function MSArticle() {
   return (
     <>
       <Container>
-
         {/* Title */}
         <Row className="justify-content-center">
           <Col xs={12} xl={6}>
@@ -52,29 +51,45 @@ export default function MSArticle() {
         {/* Author and Image */}
         <Row className="justify-content-center">
           <Col sm={8}>
-            <div className="Article-Hero">{article?.image && <ArticleImage image={image} />}</div>
+            <div className="Article-Hero">
+              {article?.image && <ArticleImage image={image} />}
+            </div>
             <div className="Article-Deck Article-Deck--italic align-items-start mt-4">
-            {article?.deck && <ArticleDeck deck={deck} />}
+              {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
         </Row>
 
         {/* Body */}
         <Row xl={2} className="mt-xl-3 col-xl-8 mx-auto">
-            <Col xl={8}>
-                <div className="Article-Author">{article?.author && <ArticleAuthor author={author} published={article.published} />}</div>
-                <div className="Article-Body Article-Body--MSA Article-Body--left-align">{article?.body && <ArticleText body={body} />}</div>
-            </Col>
+          <Col xl={8}>
+            <div className="Article-Author">
+              {article?.author && (
+                <ArticleAuthor author={author} published={article.published} />
+              )}
+            </div>
+            <div className="Article-Body Article-Body--MSA Article-Body--left-align">
+              {article?.body && <ArticleText body={body} />}
+            </div>
+            <hr />
+            <div className="Article-Author">
+              {article?.author && (
+                <ArticleAuthor author={author} published={article.published} />
+              )}
+            </div>
+            <Row>
+              <p>Browse by tag:</p>
+            </Row>
+            <hr />
+          </Col>
 
-            <Col xl={3}>
-                Ad goes here
-            </Col>
+          <Col xl={3}>Ad goes here</Col>
         </Row>
 
         {/* Credits */}
-        <Row>
+        {/* <Row>
           <Container>
-            <hr/>
+            
             <Row>
               <Col sm={3}>
               <p>Author: {article?.author && article.author.name}</p>
@@ -85,18 +100,15 @@ export default function MSArticle() {
                 <p></p>
               </Col>
             </Row>
-            <Row>
-              <p>Browse by tag:</p>
-            </Row>
-            <hr/>
+            
           </Container>
-        </Row>
+        </Row> */}
 
         {/* Related Articles */}
         <Row>
           <Container>
             <p>Related Articles</p>
-            <hr/>
+            <hr />
           </Container>
         </Row>
       </Container>
