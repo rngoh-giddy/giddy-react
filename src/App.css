@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -52,7 +54,8 @@
 }
 
 .Site-logo {
-  height: 60px;
+  height: 36px;
+  width: 100px;
   color: #d3e2ff;
 }
 
@@ -238,6 +241,24 @@
   /* or 42px */
 
   text-align: center;
+
+  color: #282828;
+}
+
+.article-container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-related-header {
+  font-family: "IvyPresto Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  /* identical to box height, or 52px */
 
   color: #282828;
 }

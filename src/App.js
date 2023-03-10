@@ -12,6 +12,7 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider';
 import FullWidthHero from './components/article-components/FullWidthHero/FullWidthHero';
 import MainNav from './components/nav-bar-components/main-nav/main-nav';
 import MainFooter from './components/footer-components/main-footer/MainFooter';
+import FisherArticle from './components/article-components/Fisher-Article/FisherArticle';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
     <Routes>
       <Route path="/article/:id" element={<Article />} />
       <Route path="/article/ms/:id" element={<Article />} />
-      <Route path="/article/fi/:id" element={<Article />} />
+      <Route path="/article/fi/:id" element={<FisherArticle/>} />
     </Routes>
+    
     <MainFooter/>
   </ThemeProvider>
   );

@@ -12,6 +12,7 @@ import ArticleAuthor from "./ArticleAuthor";
 import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
 import ArticleDeck from "./ArticleDeck";
+import Image from 'react-bootstrap/Image'
 
 export default function Article() {
   const [article, setArticle] = useState([]);
@@ -35,7 +36,14 @@ export default function Article() {
     <>
       <Container fluid>
         <Row>
-          
+          <Col>
+          </Col>
+          <amp-ad
+    type="adbutler"
+    data-account="185102"
+    data-zone="598602">
+</amp-ad>
+          <a href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602" target="_blank"><img src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x250;setID=598602;type=img;click=CLICK_MACRO_PLACEHOLDER" width="970" height="250"/></a>
         </Row>
         <Row>
           <Col sm={1}></Col>
@@ -78,9 +86,11 @@ export default function Article() {
           </Container>
         </Row>
         <Row>
-          <Container>
-            <p>Related Articles</p>
-            <hr/>
+          <Container className="article-container-flex">
+            <Col sm={9}>
+              <p className="article-related-header">Related Articles</p>
+              <hr/>
+            </Col>
           </Container>
         </Row>
       </Container>
