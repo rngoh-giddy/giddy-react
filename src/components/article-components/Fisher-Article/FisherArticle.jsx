@@ -8,11 +8,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // Fisher Article Components
-import ArticleHeader from "../Article/ArticleHeader";
+import FisherArticleHeader from "./FisherArticleHeader";
 import FisherArticleAuthor from "./FisherArticleAuthor";
 import ArticleImage from "../Article/ArticleImage";
 import ArticleText from "../Article/ArticleText";
-import ArticleDeck from "../Article/ArticleDeck";
+import FisherArticleDeck from "./FisherArticleDeck";
 
 // Fisher Article CSS
 import "./FisherArticle.css";
@@ -42,11 +42,11 @@ export default function Article() {
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
-            <div className="Article-Title">
-              {article?.title && <ArticleHeader title={title} />}
+            <div className="Article-Title align-items-xl-end">
+              {article?.title && <FisherArticleHeader title={title} />}
             </div>
             <div className="Article-Deck">
-              {article?.deck && <ArticleDeck deck={deck} />}
+              {article?.deck && <FisherArticleDeck deck={deck} />}
             </div>
           </Col>
           <Col sm={1}></Col>
@@ -62,12 +62,14 @@ export default function Article() {
                 />
               )}
             </div>
-            <div className="Article-Hero">
-              {article?.image && <ArticleImage image={image} />}
-            </div>
-            <div className="Article-Body">
-              {article?.body && <ArticleText body={body} />}
-            </div>
+            <Row>
+              <div className="Article-Hero">
+                {article?.image && <ArticleImage image={image} />}
+              </div>
+              <div className="Article-Body">
+                {article?.body && <ArticleText body={body} />}
+              </div>
+            </Row>
           </Col>
           <Col sm={3}></Col>
         </Row>
