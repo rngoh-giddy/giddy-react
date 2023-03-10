@@ -166,7 +166,7 @@
 .Article-Author {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;  
 
   font-family: "Slate Pro";
@@ -183,7 +183,7 @@
 .Article-Deck {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
 
   font-family: "Slate Pro";
