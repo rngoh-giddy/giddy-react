@@ -1,0 +1,86 @@
+.site-footer {
+    background-color: #c5e7e8;
+}
+
+.site-footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-footer-tag-line {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+
+    font-family: "Ivy Mode";
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    /* or 111% */
+
+    color: #282828;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.site-footer-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: top;
+
+    font-family: "Slate Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    /* or 100% */
+
+    color: #282828;
+
+    padding-top: 2%;
+    padding-left: 3%;
+}
+
+.site-footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: top;
+
+    font-family: "Slate Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+    color: #000000;
+
+    padding-top: 2%;
+    padding-left: 3%;
+}
+
+.site-footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Slate Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+
+    color: #000000;
+
+    padding-top: 3%;
+}
