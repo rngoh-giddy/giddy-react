@@ -7,12 +7,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import ArticleHeader from "./ArticleHeader";
-import ArticleAuthor from "./ArticleAuthor";
-import ArticleImage from "./ArticleImage";
-import ArticleText from "./ArticleText";
-import ArticleDeck from "./ArticleDeck";
-import Image from 'react-bootstrap/Image'
+import ArticleHeader from "../../components/article-components/ArticleHeader";
+import ArticleAuthor from "../../components/article-components/ArticleAuthor";
+import ArticleImage from "../../components/article-components/ArticleImage";
+import ArticleText from "../../components/article-components/ArticleText";
+import ArticleDeck from "../../components/article-components/ArticleDeck";
+import "./FisherArticle.css";
 
 export default function Article() {
   const [article, setArticle] = useState([]);
@@ -35,16 +35,7 @@ export default function Article() {
   return (
     <>
       <Container fluid>
-        <Row>
-          <Col>
-          </Col>
-          <amp-ad
-    type="adbutler"
-    data-account="185102"
-    data-zone="598602">
-</amp-ad>
-          <a href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602" target="_blank"><img src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x250;setID=598602;type=img;click=CLICK_MACRO_PLACEHOLDER" width="970" height="250"/></a>
-        </Row>
+        <Row></Row>
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
@@ -60,37 +51,47 @@ export default function Article() {
         <Row>
           <Col sm={3}></Col>
           <Col sm={6}>
-            <div className="Article-Author">{article?.author && <ArticleAuthor author={author} published={article.published} />}</div>
-            <div className="Article-Hero">{article?.image && <ArticleImage image={image} />}</div>
-            <div className="Article-Body">{article?.body && <ArticleText body={body} />}</div>
+            <div className="Article-Author col-sm-3">
+              {article?.author && (
+                <ArticleAuthor author={author} published={article.published} />
+              )}
+            </div>
+            <div className="Article-Hero">
+              {article?.image && <ArticleImage image={image} />}
+            </div>
+            <div className="Article-Body">
+              {article?.body && <ArticleText body={body} />}
+            </div>
           </Col>
           <Col sm={3}></Col>
         </Row>
         <Row>
           <Container>
-            <hr/>
+            <hr />
             <Row>
               <Col sm={3}>
-              <p>Author: {article?.author && article.author.name}</p>
-              <p>Published: {article?.published && article.published}</p>
+                <p className="text-gray">
+                  Author: {article?.author && article.author.name}
+                </p>
+                <p className="text-gray">
+                  Published: {article?.published && article.published}
+                </p>
               </Col>
               <Col sm={9}>
-                <p>Share this article</p>
+                <p className="font-size-20 fw-bold">Share this article</p>
                 <p></p>
               </Col>
             </Row>
-            <Row>
+            <Row className="fw-bold">
               <p>Browse by tag:</p>
             </Row>
-            <hr/>
+            <hr />
           </Container>
         </Row>
         <Row>
-          <Container className="article-container-flex">
-            <Col sm={9}>
-              <p className="article-related-header">Related Articles</p>
-              <hr/>
-            </Col>
+          <Container>
+            <p>Related Articles</p>
+            <hr />
           </Container>
         </Row>
       </Container>
