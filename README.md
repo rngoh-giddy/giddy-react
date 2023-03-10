@@ -32,9 +32,9 @@ Check App.css for font imports of FontSize.min.css and SlateIvyFonts.min.css
 To view minified files, refactor them but do not save them. Minified improves load speed.
 
 ``GIDDY-REACT/
-├── README.md
-├── .gitignore
-├── node_modules/
+|-- README.md
+|-- .gitignore
+|-- node_modules/
 ├── package.json
 ├── package-lock.json
 ├── public/
