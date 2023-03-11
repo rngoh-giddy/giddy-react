@@ -38,8 +38,24 @@
     padding-bottom: 1%;
   }
 
+  .Article-Deck{
+    align-items: baseline;
+  }
+
   .Article-Author p{
     margin-bottom: 7px;
+  }
+
+  .Article-Body{
+    display: block;
+  }
+
+  @media only screen and (min-width: 1200px) {
+  .Article-Body-Fisher img{    
+        float: right;
+        width: 445px;
+        margin-left: 30px;
+    }
   }
 
   .Article-Body h2{

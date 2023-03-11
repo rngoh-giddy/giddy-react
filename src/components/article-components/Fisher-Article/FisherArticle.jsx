@@ -42,7 +42,7 @@ export default function Article() {
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
-            <div className="Article-Title align-items-xl-end">
+            <div className="Article-Title">
               {article?.title && <FisherArticleHeader title={title} />}
             </div>
             <div className="Article-Deck">
@@ -51,9 +51,8 @@ export default function Article() {
           </Col>
           <Col sm={1}></Col>
         </Row>
-        <Row>
-          <Col sm={3}></Col>
-          <Col sm={6}>
+        <Row className="justify-content-center">
+          <Col sm={6} xl={10}>
             <div className="Article-Author col-sm-3">
               {article?.author && (
                 <FisherArticleAuthor
@@ -63,19 +62,17 @@ export default function Article() {
               )}
             </div>
             <Row>
-              <Col className="order-2 order-xl-1" xl={6}>
-                <div className="Article-Body">
+              <Col className="order-2 order-xl-1">
+                <div className="Article-Body Article-Body-Fisher">
+                  {article?.image && <ArticleImage image={image} />}
                   {article?.body && <ArticleText body={body} />}
                 </div>
               </Col>
-              <Col className="order-1 order-xl-2" xl={6}>
-                <div className="Article-Hero">
-                  {article?.image && <ArticleImage image={image} />}
-                </div>
-              </Col>
+              {/* <Col className="order-1 order-xl-2" xl={6}>
+                <div className="Article-Hero"></div>
+              </Col> */}
             </Row>
           </Col>
-          <Col sm={3}></Col>
         </Row>
         <Row>
           <Container>
