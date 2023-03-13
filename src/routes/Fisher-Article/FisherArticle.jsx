@@ -36,7 +36,7 @@ export default function FisherArticle() {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="fischer-container">
         <Row></Row>
         <Row>
           <Col sm={1}></Col>
@@ -61,7 +61,7 @@ export default function FisherArticle() {
               )}
             </div>
             <Col className="order-2 order-xl-1">
-              <div className="article-body article-body-fisher">
+              <div className="article-body article-body-fisher pt-xl-0">
                 {article?.image && <ArticleImage image={image} />}
                 {article?.body && <ArticleText body={body} />}
               </div>
