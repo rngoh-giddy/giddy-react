@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,8 +9,9 @@ import "./App.css";
 import Article from "./components/article-components/Article";
 
 import ThemeProvider from "react-bootstrap/ThemeProvider";
-import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import MainFooter from "./components/footer-components/main-footer/MainFooter";
+import MainNav from "./components/nav-bar-components/main-nav/MainNav";
+import EsquireArticle from "./routes/esquire-article/EsquireArticle";
 import FisherArticle from "./routes/Fisher-Article/FisherArticle";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <MainNav />
       <Routes>
         <Route path="/article/:id" element={<Article />} />
+        <Route path="/article/esq/:id" element={<EsquireArticle />} />
         <Route path="/article/ms/:id" element={<Article />} />
         <Route path="/article/fi/:id" element={<FisherArticle />} />
       </Routes>
