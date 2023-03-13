@@ -58,7 +58,7 @@ export default function MSArticle() {
         <Row className="justify-content-center">
           <Col sm={8}>
             <div className="Article-Hero">
-              {article?.image && <ArticleImage image={image} />}
+              {/* {article?.image && <ArticleImage image={image} />} */}
             </div>
             <div className="Article-Deck Article-Deck--italic align-items-start mt-4">
               {article?.deck && <ArticleDeck deck={deck} />}
