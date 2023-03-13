@@ -1,70 +1,62 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Install all dependencies from the package.json
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+View App.js file for all routes
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### `npm run build` 
+### Upload build to S3:
+### http://giddy-test-react-app.s3-website.us-east-2.amazonaws.com/
 
-### `npm run build` fails to minify
+## Font Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Check App.css for font imports of FontSize.min.css and SlateIvyFonts.min.css
+To view minified files, refactor them but do not save them. Minified improves load speed.
+
+## Project Notes:
+* `npx markdown-notes-tree --noSubdirectoryTrees` will add an updated folder tree to a readme file inside the src folder. Copy it, paste it over the tree in the parent README.md file and delete the generated readme in the src folder.
+* Add any new Routes to App.js
+* Add any new reusable components to the relevant folder inside /src/components/
+* Each Route and Components should have its own css file whose name starts with the relevant name
+* For components and their css files, use CamelCase
+* Folder names stay lowercase and dash separated 
+
+## Folder Tree
+
+- [**public**](public)
+- [**src**](src)
+    - [**assets**](src/assets)
+        - [**articles**](src/assets/articles)
+            - [**images**](src/assets/articles/images)
+    - [**components**](src/components)
+        - [**article-components**](src/components/article-components)
+            - [**FullWidthHero**](src/components/article-components/FullWidthHero)
+            - [**RelatedArticles**](src/components/article-components/RelatedArticles)
+        - [**footer-components**](src/components/footer-components)
+            - [**main-footer**](src/components/footer-components/main-footer)
+        - [**nav-bar-components**](src/components/nav-bar-components)
+            - [**main-nav**](src/components/nav-bar-components/main-nav)
+    - [**context**](src/context)
+    - [**routes**](src/routes)
+        - [**Fisher-Article**](src/routes/Fisher-Article)
+        - [**MSNBC-Article**](src/routes/MSNBC-Article)

@@ -1,33 +1,34 @@
-import React from 'react';
+import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import './App.css';
+import "./App.css";
 
-import Article from './components/article-components/Article/Article';
-import MSArticle from './components/article-components/MSNBC-Article/MSArticle';
+import Article from "./components/article-components/Article";
 
-import ThemeProvider from 'react-bootstrap/ThemeProvider';
-import FullWidthHero from './components/article-components/FullWidthHero/FullWidthHero';
-import MainNav from './components/nav-bar-components/main-nav/main-nav';
-import MainFooter from './components/footer-components/main-footer/MainFooter';
+import ThemeProvider from "react-bootstrap/ThemeProvider";
+import MainNav from "./components/nav-bar-components/main-nav/MainNav";
+import MainFooter from "./components/footer-components/main-footer/MainFooter";
+import FisherArticle from "./routes/Fisher-Article/FisherArticle";
+import MSArticle from "./routes/MSNBC-Article/MSArticle";
 
 function App() {
   return (
-  <ThemeProvider
-    breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
-    minBreakpoint="xxs"
-  >
-    {/* <MainNav /> */}
-    <Routes>
-      <Route path="/article/:id" element={<Article />} />
-      <Route path="/article/ms/:id" element={<MSArticle />} />
-      <Route path="/article/fi/:id" element={<Article />} />
-    </Routes>
-    {/* <MainFooter/> */}
-  </ThemeProvider>
+    <ThemeProvider
+      breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
+      minBreakpoint="xxs"
+    >
+      <MainNav />
+      <Routes>
+        <Route path="/article/:id" element={<Article />} />
+        <Route path="/article/ms/:id" element={<MSArticle />} />
+        <Route path="/article/fi/:id" element={<FisherArticle />} />
+      </Routes>
+
+      <MainFooter />
+    </ThemeProvider>
   );
 }
 

@@ -7,11 +7,17 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import ArticleHeader from "../Article/ArticleHeader";
+// import ArticleHeader from "../Article/ArticleHeader";
+// import ArticleAuthor from "./ArticleAuthorStack";
+// import ArticleImage from "../Article/ArticleImage";
+// import ArticleText from "../Article/ArticleText";
+// import ArticleDeck from "../Article/ArticleDeck";
+
+import ArticleHeader from "../../components/article-components/ArticleHeader";
 import ArticleAuthor from "./ArticleAuthorStack";
-import ArticleImage from "../Article/ArticleImage";
-import ArticleText from "../Article/ArticleText";
-import ArticleDeck from "../Article/ArticleDeck";
+import ArticleImage from "../../components/article-components/ArticleImage";
+import ArticleText from "../../components/article-components/ArticleText";
+import ArticleDeck from "../../components/article-components/ArticleDeck";
 
 import "./MSArticle.css";
 
