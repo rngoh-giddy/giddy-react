@@ -1,24 +1,20 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
 import "../../components/article-components/Article.css";
 import "./FisherArticle.css";
 
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-import ArticleHeader from "../../components/article-components/ArticleHeader";
-import ArticleAuthor from "../../components/article-components/ArticleAuthor";
 import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
-import ArticleDeck from "../../components/article-components/ArticleDeck";
+import "./FisherArticle.css";
 import FisherArticleAuthor from "./FisherArticleAuthor";
 import FisherArticleDeck from "./FisherArticleDeck";
 import FisherArticleHeader from "./FisherArticleHeader";
-import "./FisherArticle.css";
 
 export default function FisherArticle() {
   const [article, setArticle] = useState([]);
