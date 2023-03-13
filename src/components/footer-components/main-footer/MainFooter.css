@@ -1,0 +1,128 @@
+.site-footer {
+  background-color: #c8daff;
+}
+
+.site-footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: center;
+}
+
+.site-footer-logo-image {
+  height: 48px;
+  width: 128px;
+}
+
+.site-footer-tag-line {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #282828;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.site-footer-tag-line div {
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.site-footer-social-share {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  padding-left: 0%;
+}
+
+.site-footer-social-share img {
+  width: 30px;
+  height: 30px;
+
+  padding-right: 5px;
+}
+
+.site-footer-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: top;
+
+  padding-top: 1%;
+}
+
+.site-footer-columns h2 {
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  /* or 100% */
+
+  color: #282828;
+  padding-bottom: 1%;
+}
+
+.site-footer-columns p {
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 12px;
+  /* or 100% */
+
+  color: #282828;
+}
+
+.site-footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  justify-content: top;
+
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  color: #000000;
+
+  padding-top: 1%;
+  padding-left: 0%;
+}
+
+.site-footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  text-align: center;
+
+  color: #000000;
+
+  padding-top: 3%;
+}

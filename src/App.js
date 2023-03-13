@@ -6,13 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
-import Article from "./components/article-components/Article/Article";
+import Article from "./components/article-components/Article";
 
 import ThemeProvider from "react-bootstrap/ThemeProvider";
-import FullWidthHero from "./components/article-components/FullWidthHero/FullWidthHero";
-import MainNav from "./components/nav-bar-components/main-nav/main-nav";
+import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import MainFooter from "./components/footer-components/main-footer/MainFooter";
-import FisherArticle from "./components/article-components/Fisher-Article/FisherArticle";
+import FisherArticle from "./routes/Fisher-Article/FisherArticle";
 
 function App() {
   return (

@@ -3,21 +3,24 @@ import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import "../../components/article-components/Article.css";
+import "./FisherArticle.css";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// Fisher Article Components
-import FisherArticleHeader from "./FisherArticleHeader";
+import ArticleHeader from "../../components/article-components/ArticleHeader";
+import ArticleAuthor from "../../components/article-components/ArticleAuthor";
+import ArticleImage from "../../components/article-components/ArticleImage";
+import ArticleText from "../../components/article-components/ArticleText";
+import ArticleDeck from "../../components/article-components/ArticleDeck";
 import FisherArticleAuthor from "./FisherArticleAuthor";
-import ArticleImage from "../Article/ArticleImage";
-import ArticleText from "../Article/ArticleText";
 import FisherArticleDeck from "./FisherArticleDeck";
-
-// Fisher Article CSS
+import FisherArticleHeader from "./FisherArticleHeader";
 import "./FisherArticle.css";
 
-export default function Article() {
+export default function FisherArticle() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck } = article;
   const { id } = useParams();
@@ -42,10 +45,10 @@ export default function Article() {
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
-            <div className="Article-Title">
+            <div className="article-title">
               {article?.title && <FisherArticleHeader title={title} />}
             </div>
-            <div className="Article-Deck">
+            <div className="article-deck">
               {article?.deck && <FisherArticleDeck deck={deck} />}
             </div>
           </Col>
@@ -53,7 +56,7 @@ export default function Article() {
         </Row>
         <Row className="justify-content-center">
           <Col sm={6} xl={10}>
-            <div className="Article-Author col-sm-3">
+            <div className="article-author col-sm-3">
               {article?.author && (
                 <FisherArticleAuthor
                   author={author}
@@ -61,17 +64,12 @@ export default function Article() {
                 />
               )}
             </div>
-            <Row>
-              <Col className="order-2 order-xl-1">
-                <div className="Article-Body Article-Body-Fisher">
-                  {article?.image && <ArticleImage image={image} />}
-                  {article?.body && <ArticleText body={body} />}
-                </div>
-              </Col>
-              {/* <Col className="order-1 order-xl-2" xl={6}>
-                <div className="Article-Hero"></div>
-              </Col> */}
-            </Row>
+            <Col className="order-2 order-xl-1">
+              <div className="article-body article-body-fisher">
+                {article?.image && <ArticleImage image={image} />}
+                {article?.body && <ArticleText body={body} />}
+              </div>
+            </Col>
           </Col>
         </Row>
         <Row>
