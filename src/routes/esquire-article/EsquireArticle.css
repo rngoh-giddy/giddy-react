@@ -1,3 +1,23 @@
-.esquire-title-and-deck-row{
+/* .esquire-title-and-deck-row{
     background: #161C45;
+} */
+.esquire-container .article-title {
+  font-family: "IvyPresto Display";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: center;
+  color: #282828;
 }
+.esquire-container .article-title h1 {
+  font-size: 35px;
+}
+.esquire-container .article-deck {
+  text-align: center;
+}
+.esquire-container .article-body {
+  font-family: unset;
+}
+.esquire-container .article-body h2 {
+  font-size: 28px;
+}/*# sourceMappingURL=EsquireArticle.css.map */

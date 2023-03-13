@@ -35,7 +35,7 @@ export default function EsquireArticle() {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="esquire-container">
 
         {/* ad butler */}
         <Row>
@@ -59,7 +59,6 @@ export default function EsquireArticle() {
 
         {/* Title and Deck */}
         <Row className="esquire-title-and-deck-row">
-          <Col sm={1}></Col>
           <Col sm={10}>
             <div className="article-title">
               {article?.title && <ArticleHeader title={title} />}

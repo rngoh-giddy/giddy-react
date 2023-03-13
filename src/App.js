@@ -23,9 +23,9 @@ function App() {
       <MainNav />
       <Routes>
         <Route path="/article/:id" element={<Article />} />
+        <Route path="/article/fi/:id" element={<FisherArticle />} />
         <Route path="/article/esq/:id" element={<EsquireArticle />} />
         <Route path="/article/ms/:id" element={<Article />} />
-        <Route path="/article/fi/:id" element={<FisherArticle />} />
       </Routes>
 
       <MainFooter />
