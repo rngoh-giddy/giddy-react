@@ -29,55 +29,57 @@ export default function MainNav() {
   };
 
   return (
-    <Container fluid>
-      <Row>
-        <Navbar key="lg" sticky="top" className="mb-3 site-nav">
-          <Container fluid>
-            <Navbar.Brand href="/">
-              <Image
-                fluid
-                src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/GMG_Logo.svg"
-                fill="currentColor"
-                className="site-logo"
-              ></Image>
-            </Navbar.Brand>
-            <NavDropdown
-              title="Sexual Health"
-              id="collasible-nav-dropdown"
-              show={show}
-              onMouseEnter={showDropdown}
-              onMouseLeave={hideDropdown}
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title="Diseases & Disorders"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
-              title="Culture & Lifestyle"
-              id="collasible-nav-dropdown"
-            >
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Videos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#features">Shop</Nav.Link>
-            <Nav.Link href="#features">Sign in</Nav.Link>
-          </Container>
-        </Navbar>
-      </Row>
-    </Container>
+    <div className="site-nav-background">
+      <Container>
+        <Row>
+          <Navbar key="lg" sticky="top" className="mb-3 site-nav">
+            <Container fluid>
+              <Navbar.Brand href="/">
+                <Image
+                  fluid
+                  src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/GMG_Logo.svg"
+                  fill="currentColor"
+                  className="site-logo"
+                ></Image>
+              </Navbar.Brand>
+              <NavDropdown
+                title="Sexual Health"
+                id="collasible-nav-dropdown"
+                show={show}
+                onMouseEnter={showDropdown}
+                onMouseLeave={hideDropdown}
+              >
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title="Diseases & Disorders"
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown
+                title="Culture & Lifestyle"
+                id="collasible-nav-dropdown"
+              >
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
+              </NavDropdown>
+              <NavDropdown title="Videos" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="#features">Shop</Nav.Link>
+              <Nav.Link href="#features">Sign in</Nav.Link>
+            </Container>
+          </Navbar>
+        </Row>
+      </Container>
+    </div>
   );
 }

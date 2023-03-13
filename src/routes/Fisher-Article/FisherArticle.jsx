@@ -17,7 +17,7 @@ import ArticleText from "../../components/article-components/ArticleText";
 import ArticleDeck from "../../components/article-components/ArticleDeck";
 import "./FisherArticle.css";
 
-export default function Article() {
+export default function FisherArticle() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck } = article;
   const { id } = useParams();

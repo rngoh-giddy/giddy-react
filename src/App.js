@@ -11,7 +11,7 @@ import Article from "./components/article-components/Article";
 import ThemeProvider from "react-bootstrap/ThemeProvider";
 import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import MainFooter from "./components/footer-components/main-footer/MainFooter";
-import FisherArticle from "./routes/fisher-article/FisherArticle";
+import FisherArticle from "./routes/Fisher-Article/FisherArticle";
 
 function App() {
   return (
