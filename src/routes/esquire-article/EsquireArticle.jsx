@@ -1,22 +1,22 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
-import "./Article.css";
+import "../../components/article-components/Article.css";
+import "./EsquireArticle.css";
 
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
-import ArticleHeader from "./ArticleHeader";
-import ArticleAuthor from "./ArticleAuthor";
-import ArticleImage from "./ArticleImage";
-import ArticleText from "./ArticleText";
-import ArticleDeck from "./ArticleDeck";
 import Image from "react-bootstrap/Image";
 
-export default function Article() {
+import ArticleAuthor from "../../components/article-components/ArticleAuthor";
+import ArticleDeck from "../../components/article-components/ArticleDeck";
+import ArticleHeader from "../../components/article-components/ArticleHeader";
+import ArticleImage from "../../components/article-components/ArticleImage";
+import ArticleText from "../../components/article-components/ArticleText";
+
+export default function EsquireArticle() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck } = article;
   const { id } = useParams();
@@ -36,16 +36,16 @@ export default function Article() {
 
   return (
     <>
-      <Container fluid className="article-container">
+      <Container fluid className="esquire-container">
 
         {/* ad butler */}
         <Row>
+          <Col></Col>
           <amp-ad
             type="adbutler"
             data-account="185102"
             data-zone="598602"
           ></amp-ad>
-
           <a
             href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602"
             target="_blank"
@@ -58,8 +58,8 @@ export default function Article() {
           </a>
         </Row>
 
-        {/* Article Header */}
-        <Row>
+        {/* Title and Deck */}
+        <Row className="esquire-title-and-deck-row">
           <Col className="mx-auto">
             <div className="article-title">
               {article?.title && <ArticleHeader title={title} />}
@@ -70,9 +70,9 @@ export default function Article() {
           </Col>
         </Row>
 
-        {/* Article Body */}
+        {/* Article Image and Body */}
         <Row>
-          <Col className="col-lg-7 mx-auto">
+          <Col className="col-lg-6 mx-auto">
             <div className="article-author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
@@ -87,40 +87,22 @@ export default function Article() {
           </Col>
         </Row>
 
-        {/* Author Information */}
+        {/* Author, publish, etc. */}
         <Row>
           <Container className="author-container">
             <hr />
             <Row>
               <Col className="col-6">
-                <p className="author">
-                  Author: <span>{article?.author && article.author.name}</span>
-                </p>
-                <p className="published">
-                  Published:{" "}
-                  <span>{article?.published && article.published}</span>
-                </p>
+                <p className="author">Author: <span>{article?.author && article.author.name}</span></p>
+                <p className="published">Published: <span>{article?.published && article.published}</span></p>
               </Col>
               <Col className="col-6">
                 <p className="article-share mx-auto">Share this article</p>
                 <Row className="images-row">
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png"
-                    alt="facebook"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png"
-                  />
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png" alt="facebook"/>
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png" />
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png" />
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png" />
                 </Row>
               </Col>
             </Row>
@@ -134,14 +116,12 @@ export default function Article() {
         {/* Related Articles */}
         <Row>
           <Container className="article-container-flex">
-            <Col sm={9}>
+            <Col className="col-12 col-md-9">
               <p className="article-related-header">Related Articles</p>
               <hr />
             </Col>
           </Container>
         </Row>
-
-
       </Container>
     </>
   );
