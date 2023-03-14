@@ -19,6 +19,9 @@ import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
 import ArticleDeck from "../../components/article-components/ArticleDeck";
 
+import Quiz from "../../components/quizzes/quiz-object"
+import TestQuiz from '../../components/quizzes/test-quiz';
+
 import "./MSArticle.css";
 
 export default function MSArticle() {
@@ -58,7 +61,7 @@ export default function MSArticle() {
         <Row className="justify-content-center">
           <Col sm={8}>
             <div className="Article-Hero">
-              {/* {article?.image && <ArticleImage image={image} />} */}
+              {article?.image && <ArticleImage image={image} />}
             </div>
             <div className="Article-Deck Article-Deck--italic align-items-start mt-4">
               {article?.deck && <ArticleDeck deck={deck} />}
@@ -66,14 +69,18 @@ export default function MSArticle() {
           </Col>
         </Row>
 
+
         {/* Body */}
         <Row xl={2} className="mt-xl-3 col-xl-8 mx-auto">
           <Col xl={8}>
             <div className="Article-Author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
-              )}
+                )}
             </div>
+
+            <Quiz quizClass={'blue'} targetQuiz={TestQuiz.questions}/>
+            
             <div className="Article-Body Article-Body--MSA Article-Body--left-align">
               {article?.body && <ArticleText body={body} />}
             </div>
