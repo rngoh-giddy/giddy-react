@@ -8,6 +8,7 @@ import "./EsquireArticle.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Image from "react-bootstrap/Image";
 
 import ArticleAuthor from "../../components/article-components/ArticleAuthor";
 import ArticleDeck from "../../components/article-components/ArticleDeck";
@@ -94,17 +95,22 @@ export default function EsquireArticle() {
           <Container>
             <hr />
             <Row>
-              <Col sm={3}>
-                <p>Author: {article?.author && article.author.name}</p>
-                <p>Published: {article?.published && article.published}</p>
+              <Col className="col-6">
+                <p className="author">Author: <span>{article?.author && article.author.name}</span></p>
+                <p className="published">Published: <span>{article?.published && article.published}</span></p>
               </Col>
-              <Col sm={9}>
-                <p>Share this article</p>
-                <p></p>
+              <Col className="col-6">
+                <p className="article-share mx-auto">Share this article</p>
+                <Row className="images-row">
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png" alt="facebook"/>
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png" />
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png" />
+                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png" />
+                </Row>
               </Col>
             </Row>
             <Row>
-              <p>Browse by tag:</p>
+              <p className="browse-by-tag">Browse by tag:</p>
             </Row>
             <hr />
           </Container>
