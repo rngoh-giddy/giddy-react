@@ -1,0 +1,25 @@
+/* .esquire-title-and-deck-row{
+    background: #161C45;
+} */
+.esquire-container .article-title {
+  text-align: center;
+}
+.esquire-container .article-title h1 {
+  font-size: 35px;
+  margin: 0 auto 20px;
+}
+.esquire-container .article-deck div {
+  text-align: center;
+  margin: 0 auto;
+}
+.esquire-container .article-author div {
+  text-align: center;
+  margin: 0 auto;
+}
+.esquire-container .article-body {
+  padding-top: 30px;
+  font-family: unset;
+}
+.esquire-container .article-body h2 {
+  font-size: 28px;
+}/*# sourceMappingURL=EsquireArticle.css.map */

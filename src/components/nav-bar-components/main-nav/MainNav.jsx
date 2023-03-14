@@ -33,7 +33,7 @@ export default function MainNav() {
       <Container>
         <Row>
           <Navbar key="lg" sticky="top" className="mb-3 site-nav">
-            <Container fluid>
+            <Container fluid style={{overflow: "hidden"}}>
               <Navbar.Brand href="/">
                 <Image
                   fluid
