@@ -1,19 +1,22 @@
 .site-nav {
-    background-color: #161c45;
-    color: #ffffff;
-    font-family: "Stale Pro";
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    height: 60px;
+  color: #ffffff;
+  font-family: "Stale Pro";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.site-nav-background {
+  background-color: #161c45;
+  height: 60px;
 }
 
 .site-logo {
-    height: 36px;
-    width: 100px;
-    color: #d3e2ff;
+  height: 36px;
+  width: 100px;
+  color: #d3e2ff;
 }

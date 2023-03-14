@@ -1,23 +1,22 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
 import "../../components/article-components/Article.css";
 import "./FisherArticle.css";
 
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-import ArticleHeader from "../../components/article-components/ArticleHeader";
-import ArticleAuthor from "../../components/article-components/ArticleAuthor";
 import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
-import ArticleDeck from "../../components/article-components/ArticleDeck";
 import "./FisherArticle.css";
+import FisherArticleAuthor from "./FisherArticleAuthor";
+import FisherArticleDeck from "./FisherArticleDeck";
+import FisherArticleHeader from "./FisherArticleHeader";
 
-export default function Article() {
+export default function FisherArticle() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck } = article;
   const { id } = useParams();
@@ -43,30 +42,31 @@ export default function Article() {
           <Col sm={1}></Col>
           <Col sm={10}>
             <div className="article-title">
-              {article?.title && <ArticleHeader title={title} />}
+              {article?.title && <FisherArticleHeader title={title} />}
             </div>
             <div className="article-deck">
-              {article?.deck && <ArticleDeck deck={deck} />}
+              {article?.deck && <FisherArticleDeck deck={deck} />}
             </div>
           </Col>
           <Col sm={1}></Col>
         </Row>
-        <Row>
-          <Col sm={3}></Col>
-          <Col sm={6}>
+        <Row className="justify-content-center">
+          <Col sm={6} xl={10}>
             <div className="article-author col-sm-3">
               {article?.author && (
-                <ArticleAuthor author={author} published={article.published} />
+                <FisherArticleAuthor
+                  author={author}
+                  published={article.published}
+                />
               )}
             </div>
-            <div className="article-hero">
-              {article?.image && <ArticleImage image={image} />}
-            </div>
-            <div className="article-body">
-              {article?.body && <ArticleText body={body} />}
-            </div>
+            <Col className="order-2 order-xl-1">
+              <div className="article-body article-body-fisher">
+                {article?.image && <ArticleImage image={image} />}
+                {article?.body && <ArticleText body={body} />}
+              </div>
+            </Col>
           </Col>
-          <Col sm={3}></Col>
         </Row>
         <Row>
           <Container>
