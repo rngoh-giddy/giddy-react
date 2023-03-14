@@ -72,7 +72,7 @@ export default function FisherArticle() {
           <Container>
             <hr />
             <Row>
-              <Col sm={3}>
+              <Col>
                 <p className="text-gray">
                   Author: {article?.author && article.author.name}
                 </p>
@@ -80,9 +80,14 @@ export default function FisherArticle() {
                   Published: {article?.published && article.published}
                 </p>
               </Col>
-              <Col sm={9}>
+              <Col>
                 <p className="font-size-20 fw-bold">Share this article</p>
-                <p></p>
+                <>
+                  <img src="https://via.placeholder.com/28x28"></img>
+                  <img src="https://via.placeholder.com/28x28"></img>
+                  <img src="https://via.placeholder.com/28x28"></img>
+                  <img src="https://via.placeholder.com/28x28"></img>
+                </>
               </Col>
             </Row>
             <Row className="fw-bold">
