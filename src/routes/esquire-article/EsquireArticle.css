@@ -16,46 +16,4 @@
 }
 .esquire-container .article-body h2 {
   font-size: 28px;
-}
-.esquire-container .article-body ul {
-  padding-left: 20px !important;
-}
-.esquire-container .author {
-  margin-bottom: 10px;
-}
-.esquire-container .author, .esquire-container .published {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 130%;
-  color: #686F77;
-}
-.esquire-container :is(.author, .published) span {
-  color: #282828;
-}
-.esquire-container .article-share {
-  width: 135.59px;
-  margin-bottom: 10px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 130%;
-  color: #282828;
-}
-.esquire-container .images-row {
-  flex-wrap: nowrap;
-  justify-content: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-}
-.esquire-container .images-row img {
-  width: 27.9px;
-  height: 27.9px;
-}
-.esquire-container .browse-by-tag {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 130%;
-  color: #282828;
 }/*# sourceMappingURL=EsquireArticle.css.map */

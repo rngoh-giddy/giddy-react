@@ -60,7 +60,7 @@ export default function EsquireArticle() {
 
         {/* Title and Deck */}
         <Row className="esquire-title-and-deck-row">
-          <Col sm={10}>
+          <Col className="mx-auto">
             <div className="article-title">
               {article?.title && <ArticleHeader title={title} />}
             </div>
@@ -68,13 +68,11 @@ export default function EsquireArticle() {
               {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
-          <Col sm={1}></Col>
         </Row>
 
         {/* Article Image and Body */}
         <Row>
-          <Col sm={3}></Col>
-          <Col sm={6}>
+          <Col className="col-lg-6 mx-auto">
             <div className="article-author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
@@ -87,12 +85,11 @@ export default function EsquireArticle() {
               {article?.body && <ArticleText body={body} />}
             </div>
           </Col>
-          <Col sm={3}></Col>
         </Row>
 
         {/* Author, publish, etc. */}
         <Row>
-          <Container>
+          <Container className="author-container">
             <hr />
             <Row>
               <Col className="col-6">
@@ -116,9 +113,10 @@ export default function EsquireArticle() {
           </Container>
         </Row>
 
+        {/* Related Articles */}
         <Row>
           <Container className="article-container-flex">
-            <Col sm={9}>
+            <Col className="col-12 col-md-9">
               <p className="article-related-header">Related Articles</p>
               <hr />
             </Col>

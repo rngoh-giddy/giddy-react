@@ -36,14 +36,16 @@ export default function Article() {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="article-container">
+
+        {/* ad butler */}
         <Row>
-          <Col></Col>
           <amp-ad
             type="adbutler"
             data-account="185102"
             data-zone="598602"
           ></amp-ad>
+
           <a
             href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602"
             target="_blank"
@@ -55,9 +57,10 @@ export default function Article() {
             />
           </a>
         </Row>
+
+        {/* Article Header */}
         <Row>
-          <Col sm={1}></Col>
-          <Col sm={10}>
+          <Col className="mx-auto">
             <div className="article-title">
               {article?.title && <ArticleHeader title={title} />}
             </div>
@@ -65,11 +68,11 @@ export default function Article() {
               {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
-          <Col sm={1}></Col>
         </Row>
+
+        {/* Article Body */}
         <Row>
-          <Col sm={3}></Col>
-          <Col sm={6}>
+          <Col className="col-lg-7 mx-auto">
             <div className="article-author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
@@ -82,27 +85,53 @@ export default function Article() {
               {article?.body && <ArticleText body={body} />}
             </div>
           </Col>
-          <Col sm={3}></Col>
         </Row>
+
+        {/* Author Information */}
         <Row>
-          <Container>
+          <Container className="author-container">
             <hr />
             <Row>
-              <Col sm={3}>
-                <p>Author: {article?.author && article.author.name}</p>
-                <p>Published: {article?.published && article.published}</p>
+              <Col className="col-6">
+                <p className="author">
+                  Author: <span>{article?.author && article.author.name}</span>
+                </p>
+                <p className="published">
+                  Published:{" "}
+                  <span>{article?.published && article.published}</span>
+                </p>
               </Col>
-              <Col sm={9}>
-                <p>Share this article</p>
-                <p></p>
+              <Col className="col-6">
+                <p className="article-share mx-auto">Share this article</p>
+                <Row className="images-row">
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png"
+                    alt="facebook"
+                  />
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png"
+                  />
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png"
+                  />
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png"
+                  />
+                </Row>
               </Col>
             </Row>
             <Row>
-              <p>Browse by tag:</p>
+              <p className="browse-by-tag">Browse by tag:</p>
             </Row>
             <hr />
           </Container>
         </Row>
+
+        {/* Related Articles */}
         <Row>
           <Container className="article-container-flex">
             <Col sm={9}>
@@ -111,6 +140,8 @@ export default function Article() {
             </Col>
           </Container>
         </Row>
+
+
       </Container>
     </>
   );
