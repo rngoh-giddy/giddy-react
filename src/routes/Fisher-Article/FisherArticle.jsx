@@ -10,11 +10,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 import ArticleImage from "../../components/article-components/ArticleImage";
-import ArticleText from "../../components/article-components/ArticleText";
 import "./FisherArticle.css";
 import FisherArticleAuthor from "./FisherArticleAuthor";
 import FisherArticleDeck from "./FisherArticleDeck";
 import FisherArticleHeader from "./FisherArticleHeader";
+import FisherArticleText from "./FisherArticleText";
 
 export default function FisherArticle() {
   const [article, setArticle] = useState([]);
@@ -63,7 +63,7 @@ export default function FisherArticle() {
             <Col className="order-2 order-xl-1">
               <div className="article-body article-body-fisher pt-xl-0">
                 {article?.image && <ArticleImage image={image} />}
-                {article?.body && <ArticleText body={body} />}
+                {article?.body && <FisherArticleText body={body} />}
               </div>
             </Col>
           </Col>
