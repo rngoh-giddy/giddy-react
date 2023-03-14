@@ -22,9 +22,9 @@ export default function QuizAnswer({id, name, body, value, handleChange}) {
     
     return ( 
         <>
-            <div className='bg-info d-flex gap-2 p-2 rounded-3' onClick={checkButton}>
+            <div className='quiz-ans-block d-flex gap-2 p-2 rounded-3' onClick={checkButton}>
                 <input type="radio" name={name} id={id} value={value} ref={btnRef} onChange={() => handleChange(setQuizAnswerChecked)} />
-                <label htmlFor="quiz-ans">{body}</label>
+                <label htmlFor={name} className="text-slate-pro-regular">{body}</label>
             </div>
         </>
      );

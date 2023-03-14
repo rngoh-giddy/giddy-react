@@ -1,6 +1,19 @@
 @import url("./FontSize.min.css");
 @import url("./SlateIvyFonts.min.css");
 
+:root{
+  --giddy-primary-blue: #161C45;
+  --giddy-primary-sky: #D3E2FF;
+}
+
+.taxonomy-list{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.taxonomy-list:not(:last-child)::after{
+  content: ' > '
+}
 .App {
   text-align: center;
 }
