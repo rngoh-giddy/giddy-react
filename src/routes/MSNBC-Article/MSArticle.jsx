@@ -26,7 +26,7 @@ import "./MSArticle.css";
 
 export default function MSArticle() {
   const [article, setArticle] = useState([]);
-  const { author, title, body, image, deck } = article;
+  const { author, title, body, image, deck, taxonomy } = article;
   const { id } = useParams();
   console.log(article);
 
@@ -48,6 +48,13 @@ export default function MSArticle() {
         {/* Title */}
         <Row className="justify-content-center">
           <Col xs={12} xl={6}>
+            <div>
+              {
+                taxonomy?.primary.map((el, index) => {
+                  return <a className="taxonomy-list text-slate-pro-condensed-bold" href={`https://getmegiddy.com/taxonomy/term/${el.drupal_id}`}>{el.name}</a>
+                })
+              }
+            </div>
             <div className="Article-Title">
               {article?.title && <ArticleHeader title={title} />}
             </div>
@@ -80,7 +87,7 @@ export default function MSArticle() {
             </div>
 
             <Quiz quizClass={'blue'} targetQuiz={TestQuiz.questions}/>
-            
+
             <div className="Article-Body Article-Body--MSA Article-Body--left-align">
               {article?.body && <ArticleText body={body} />}
             </div>
@@ -98,24 +105,6 @@ export default function MSArticle() {
 
           <Col xl={3}>Ad goes here</Col>
         </Row>
-
-        {/* Credits */}
-        {/* <Row>
-          <Container>
-            
-            <Row>
-              <Col sm={3}>
-              <p>Author: {article?.author && article.author.name}</p>
-              <p>Published: {article?.published && article.published}</p>
-              </Col>
-              <Col sm={9}>
-                <p>Share this article</p>
-                <p></p>
-              </Col>
-            </Row>
-            
-          </Container>
-        </Row> */}
 
         {/* Related Articles */}
         <Row>

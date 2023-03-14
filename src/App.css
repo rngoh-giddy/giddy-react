@@ -6,6 +6,14 @@
   --giddy-primary-sky: #D3E2FF;
 }
 
+.taxonomy-list{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.taxonomy-list:not(:last-child)::after{
+  content: ' > '
+}
 .App {
   text-align: center;
 }
