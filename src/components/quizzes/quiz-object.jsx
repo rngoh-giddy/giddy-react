@@ -1,14 +1,15 @@
 import React from 'react';
 import QuizAnswer from './quiz-answer';
-import TestQuiz from './test-quiz';
 import { useState, useEffect } from 'react';
 
-function Quiz() {
+import "./style/quiz-style.css";
+
+function Quiz({quizClass, targetQuiz}) {
     //*Index used for keeping track of current question
     const [currentIndex, setcurrentIndex] = useState(0)
     
     //* Current quiz
-    const questions = TestQuiz.questions;
+    const questions = targetQuiz;
     //* Array of possible answers
     let ansList = [];
     
@@ -52,18 +53,20 @@ function Quiz() {
             return (prevIndex -= 1);
         });
     }
+    let quizTheme = quizClass !== undefined ? quizClass:'blue';
+    const classList = `${quizTheme} inline-quiz rounded-3 my-5`
 
     return (  
         <>
-            <div className='border-1 m-auto w-50 bg-dark bg-opacity-25'>
-                <h2>{currentQuestion?.text}</h2>
+            <div className={classList}>
+                <h2 className='text-slate-pro-bold'>{currentQuestion?.text}</h2>
                 <div className="d-flex flex-column gap-2 mb-3">
                     {ansList}
                 </div>
 
                 <div className="d-flex justify-content-between">
-                    { currentIndex > 0 && <button onClick={decreaseIndex} className='p-2 bg-danger d-inline-block'>Prev Question</button> }
-                    <button onClick={increaseIndex} disabled={!checked} className='p-2 bg-primary d-inline-block'>Next Question</button>
+                    <button onClick={decreaseIndex} disabled={(currentIndex == 0)?true:false} className='text-slate-pro-medium p-2 quiz-button quiz-button-prev d-inline-block'>Prev question</button>
+                    <button onClick={increaseIndex} disabled={!checked} className='text-slate-pro-medium p-2 quiz-button quiz-button-next d-inline-block'>Next question</button>
                 </div>
             </div>
         </>

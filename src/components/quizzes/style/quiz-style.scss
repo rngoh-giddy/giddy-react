@@ -1,0 +1,82 @@
+.inline-quiz{
+    &.blue{
+        --bg-color: var(--giddy-primary-blue);
+        --text-color: white;
+        --button-color: var(--giddy-primary-sky);
+    }
+
+    // Test, don't use
+    // ...unless
+    &.red{
+        --bg-color: red;
+        --text-color: blue;
+        --button-color: white;
+    }
+
+
+    background-color: var(--bg-color);
+    padding: 15px 22px;
+
+    h2,label{
+        color: var(--text-color);
+        @extend .prevent-select;
+    }
+
+    .quiz-ans-block{
+        border: solid 1.5px var(--text-color);
+        &:hover{cursor: pointer;}
+        
+        [type='radio']{
+            &:hover{cursor: pointer;}
+            appearance: none;
+            
+            &:after {
+                @extend .custom-radio-btn;
+                background-color: transparent;                
+            }
+        
+            &:checked:after {
+                @extend .custom-radio-btn;
+                background-color: white;
+            }
+        }
+    }
+
+    .quiz-button{
+        transition: all 0.2s ease;
+        &:hover{cursor: pointer;}
+        border-radius: 4px;
+        border: none;
+        
+        &.quiz-button-next,
+        &.quiz-button-prev {
+            background: var(--button-color);
+            color: var(--bg-color);
+        }
+
+        &:disabled{
+            background-color: #8e99af;
+        }
+
+    }
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.custom-radio-btn{
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    top: 2px;
+    left: -1px;
+    position: relative;
+    //background-color: var(--bg-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
