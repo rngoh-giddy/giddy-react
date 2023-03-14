@@ -72,7 +72,7 @@ export default function EsquireArticle() {
 
         {/* Article Image and Body */}
         <Row>
-          <Col className="col-lg-6 mx-auto">
+          <Col className="col-lg-7 mx-auto">
             <div className="article-author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />

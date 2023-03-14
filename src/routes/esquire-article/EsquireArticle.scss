@@ -8,10 +8,17 @@
     
     .article-title h1 {
         font-size: 35px;
+        margin: 0 auto 20px;
     }
     
-    .article-deck { 
+    .article-deck div { 
         text-align: center;
+        margin: 0 auto;
+    }
+    
+    .article-author div {
+        text-align: center;
+        margin: 0 auto;
     }
 
     .article-body {

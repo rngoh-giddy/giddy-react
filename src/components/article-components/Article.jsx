@@ -60,7 +60,7 @@ export default function Article() {
 
         {/* Article Header */}
         <Row>
-          <Col className="mx-auto">
+          <Col className="col-lg-7 mx-auto">
             <div className="article-title">
               {article?.title && <ArticleHeader title={title} />}
             </div>

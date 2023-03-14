@@ -6,9 +6,15 @@
 }
 .esquire-container .article-title h1 {
   font-size: 35px;
+  margin: 0 auto 20px;
 }
-.esquire-container .article-deck {
+.esquire-container .article-deck div {
   text-align: center;
+  margin: 0 auto;
+}
+.esquire-container .article-author div {
+  text-align: center;
+  margin: 0 auto;
 }
 .esquire-container .article-body {
   padding-top: 30px;
