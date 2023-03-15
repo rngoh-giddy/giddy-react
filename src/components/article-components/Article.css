@@ -115,3 +115,13 @@
 
     color: #282828;
 }
+
+.article-options h1{
+    border-top: 10px solid #307FE2;
+    border-bottom: 1px dotted;
+    text-align: left;
+}
+
+.article-options-bg{
+    background-color: #F3F3F3;
+}

@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
+import ArticleOptions from "../../components/article-components/ArticleOptions";
 import ArticleImage from "../../components/article-components/ArticleImage";
 import "./FisherArticle.css";
 import FisherArticleAuthor from "./FisherArticleAuthor";
@@ -64,6 +65,7 @@ export default function FisherArticle() {
               <div className="article-body article-body-fisher pt-xl-0">
                 {article?.image && <ArticleImage image={image} />}
                 {article?.body && <FisherArticleText body={body} />}
+                {article?.id && <ArticleOptions id={id} />}
               </div>
             </Col>
           </Col>
