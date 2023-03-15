@@ -82,12 +82,6 @@ export default function FisherArticle() {
               </Col>
               <Col>
                 <p className="font-size-20 fw-bold">Share this article</p>
-                <>
-                  <img src="https://via.placeholder.com/28x28"></img>
-                  <img src="https://via.placeholder.com/28x28"></img>
-                  <img src="https://via.placeholder.com/28x28"></img>
-                  <img src="https://via.placeholder.com/28x28"></img>
-                </>
               </Col>
             </Row>
             <Row className="fw-bold">
