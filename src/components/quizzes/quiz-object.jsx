@@ -65,7 +65,7 @@ function Quiz({quizClass, targetQuiz}) {
                 </div>
 
                 <div className="d-flex justify-content-between">
-                    <button onClick={decreaseIndex} disabled={(currentIndex == 0)?true:false} className='text-slate-pro-medium p-2 quiz-button quiz-button-prev d-inline-block'>Prev question</button>
+                    <button onClick={decreaseIndex} disabled={(currentIndex === 0)?true:false} className='text-slate-pro-medium p-2 quiz-button quiz-button-prev d-inline-block'>Prev question</button>
                     <button onClick={increaseIndex} disabled={!checked} className='text-slate-pro-medium p-2 quiz-button quiz-button-next d-inline-block'>Next question</button>
                 </div>
             </div>

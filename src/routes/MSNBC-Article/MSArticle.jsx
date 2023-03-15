@@ -40,11 +40,17 @@ export default function MSArticle() {
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  });
 
   return (
     <>
+    <Container fluid className="msnbc-bg p-0">
       <Container>
+        {/* Top Ad */}
+        <Col xl={8} className="ads top-ad mx-auto mb-4">
+          Ad goes here
+        </Col>
+        
         {/* Title */}
         <Row className="justify-content-center">
           <Col xs={12} xl={6}>
@@ -103,7 +109,7 @@ export default function MSArticle() {
             <hr />
           </Col>
 
-          <Col xl={3}>Ad goes here</Col>
+          <Col xl={3} className="ads side-ad">Ad goes here</Col>
         </Row>
 
         {/* Related Articles */}
@@ -113,6 +119,7 @@ export default function MSArticle() {
             <hr />
           </Container>
         </Row>
+      </Container>
       </Container>
     </>
   );

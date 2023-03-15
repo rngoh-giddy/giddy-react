@@ -1,0 +1,45 @@
+.msnbc-bg{
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        background-color: var(--giddy-primary-blue);
+        width: 100%;
+        height: 375px;
+        @media only screen and (min-width: 1200px) {
+            padding-top: 24px;
+            height: 1200px;
+        }
+    }
+
+    .ads{
+        color: white;
+        background-color: gray;
+        &.top-ad{
+            height: 100px;
+
+            @media only screen and (min-width: 1200px) {
+                height: 250px;
+            }
+        }
+        &.side-ad{
+            height: 600px;
+        }
+    }
+
+    .taxonomy-list{
+        color: var(--giddy-primary-sky);
+    }
+
+    .Article-Title{
+        color: white;
+    }
+    .Article-Deck{color: white;}
+
+    .Article-Hero img{width: 100%;}
+    .Article-Deck--italic{font-family: 'Slate Pro Italic';}
+    .Article-Body--left-align h2{text-align: left;}
+    .Article-Body--MSA h2{font-size: 28px;}
+    .Article-Body h2{margin-top: 40px;}
+}
