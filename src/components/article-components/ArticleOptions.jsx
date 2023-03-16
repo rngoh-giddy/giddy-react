@@ -38,7 +38,7 @@ export default function ArticleOptions({
         <Col sm={6} className="mx-auto article-options-bg">
           <h1 className="pb-2 pt-3 font-size-32">MORE FROM GIDDY</h1>
           {articles.slice(0, 2).map((article) => (
-            <div className="col-5" key={article.id}>
+            <div className="col-7" key={article.id}>
               <img
                 id="article-options-img"
                 src={article?.image || propsImage}
