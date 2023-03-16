@@ -125,3 +125,15 @@
 .article-options-bg{
     background-color: #F3F3F3;
 }
+
+.article-options-taxonomy{
+    color: #307FE2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+
+#article-options-img{
+    width: 90px;
+    height: 90px;
+}

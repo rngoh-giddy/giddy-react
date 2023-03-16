@@ -36,15 +36,20 @@ export default function ArticleOptions({
     <Container className="article-options">
       <Row>
         <Col sm={6} className="mx-auto article-options-bg">
-          <h1 className="pb-2 pt-3">MORE FROM GIDDY</h1>
-          {articles.map((article) => (
-            <div key={article.id}>
-              <h1>{article.taxonomy.primary[0].name}</h1>
-              <h1>{article.title || propsTitle}</h1>
+          <h1 className="pb-2 pt-3 font-size-32">MORE FROM GIDDY</h1>
+          {articles.slice(0, 2).map((article) => (
+            <div className="col-5" key={article.id}>
               <img
-                src={article.image || propsImage}
-                alt={article.title || propsTitle}
+                id="article-options-img"
+                src={article?.image || propsImage}
+                alt={article?.title || propsTitle}
               />
+              <h3 className="article-options-taxonomy font-size-14">
+                {article?.taxonomy.primary[0].name}
+              </h3>
+              <h3 className="article-options-title font-size-16">
+                {article?.title || propsTitle}
+              </h3>
             </div>
           ))}
         </Col>
