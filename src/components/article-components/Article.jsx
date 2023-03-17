@@ -1,26 +1,26 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
 import "./Article.css";
 
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
-import ArticleHeader from "./ArticleHeader";
+import Image from "react-bootstrap/Image";
 import ArticleAuthor from "./ArticleAuthor";
+import ArticleDeck from "./ArticleDeck";
+import ArticleHeader from "./ArticleHeader";
 import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
-import ArticleDeck from "./ArticleDeck";
-import Image from "react-bootstrap/Image";
+import RelatedArticlesContainer from "./related-articles/RelatedArticlesContainer";
 
 export default function Article() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck } = article;
   const { id } = useParams();
-  console.log(article);
+  // console.log(article);
 
   useEffect(() => {
     fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
@@ -34,10 +34,11 @@ export default function Article() {
       });
   }, []);
 
+  console.log("id: ", id, "title: ", title);
+  
   return (
     <>
       <Container fluid className="article-container">
-
         {/* ad butler */}
         <Row>
           <amp-ad
@@ -134,14 +135,13 @@ export default function Article() {
         {/* Related Articles */}
         <Row>
           <Container className="article-container-flex">
-            <Col sm={9}>
+            <Col>
               <p className="article-related-header">Related Articles</p>
               <hr />
+              {article?.id && <RelatedArticlesContainer id={id} title={title} />}
             </Col>
           </Container>
         </Row>
-
-
       </Container>
     </>
   );

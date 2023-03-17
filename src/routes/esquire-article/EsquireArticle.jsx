@@ -15,6 +15,7 @@ import ArticleDeck from "../../components/article-components/ArticleDeck";
 import ArticleHeader from "../../components/article-components/ArticleHeader";
 import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
+import RelatedArticlesContainer from "../../components/article-components/related-articles/RelatedArticlesContainer";
 
 export default function EsquireArticle() {
   const [article, setArticle] = useState([]);
@@ -116,9 +117,10 @@ export default function EsquireArticle() {
         {/* Related Articles */}
         <Row>
           <Container className="article-container-flex">
-            <Col className="col-12 col-md-9">
+            <Col>
               <p className="article-related-header">Related Articles</p>
               <hr />
+              {article?.id && <RelatedArticlesContainer id={id} title={title} />}
             </Col>
           </Container>
         </Row>

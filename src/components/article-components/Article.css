@@ -16,9 +16,8 @@
 .article-author {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  font-family: "Slate Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -33,7 +32,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Slate Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -65,7 +63,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "Slate Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -148,6 +145,10 @@
   align-items: center;
   justify-content: center;
 }
+.article-container-flex .col {
+  max-width: 825px;
+  margin: 0 auto;
+}
 
 .article-related-header {
   font-family: "IvyPresto Display";
@@ -157,4 +158,27 @@
   line-height: 130%;
   /* identical to box height, or 52px */
   color: #282828;
-}/*# sourceMappingURL=Article.css.map */
+}
+
+.article-options h1{
+    border-top: 10px solid #307FE2;
+    border-bottom: 1px dotted;
+    text-align: left;
+}
+
+.article-options-bg{
+    background-color: #F3F3F3;
+}
+
+.article-options-taxonomy{
+    color: #307FE2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+
+#article-options-img{
+    width: 90px;
+    height: 90px;
+}
+/*# sourceMappingURL=Article.css.map */

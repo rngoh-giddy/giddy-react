@@ -1,0 +1,58 @@
+.related-article-container {
+    border: 1px solid #999999;
+    border-radius: 10px;
+    flex-direction: column-reverse;
+    width: 92vw;
+    max-width: 825px;
+
+    .related-article-text-container {
+        max-width: 83.16vw;
+    }
+
+    img {
+        max-width: 83.16vw;
+        border-radius: 8px;
+
+        @media screen and (min-width: 992px) {
+            max-width: 187px;
+            max-height: 126px;
+        }
+    }
+
+    .related-article-text-container {
+        @media screen and (min-width: 992px) {
+            max-width: 580px;
+        }
+        .taxonomy {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: #282828;
+        }
+
+        h3 {
+            font-family: 'IvyPresto Display';
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 130%;
+            color: #282828;
+        }
+
+        .article-author {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-transform: capitalize;
+            color: #999999;
+        }
+
+        .article-deck {
+            font-size: 16px;
+            line-height: 140%;
+            letter-spacing: 0.01em;
+            color: #686F77;
+        }
+    }
+}

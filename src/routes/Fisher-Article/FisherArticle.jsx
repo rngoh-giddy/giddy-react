@@ -9,12 +9,13 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
+import ArticleOptions from "../../components/article-components/ArticleOptions";
 import ArticleImage from "../../components/article-components/ArticleImage";
-import ArticleText from "../../components/article-components/ArticleText";
 import "./FisherArticle.css";
 import FisherArticleAuthor from "./FisherArticleAuthor";
 import FisherArticleDeck from "./FisherArticleDeck";
 import FisherArticleHeader from "./FisherArticleHeader";
+import FisherArticleText from "./FisherArticleText";
 
 export default function FisherArticle() {
   const [article, setArticle] = useState([]);
@@ -36,7 +37,7 @@ export default function FisherArticle() {
 
   return (
     <>
-      <Container fluid>
+      <Container fluid className="fischer-container">
         <Row></Row>
         <Row>
           <Col sm={1}></Col>
@@ -61,9 +62,10 @@ export default function FisherArticle() {
               )}
             </div>
             <Col className="order-2 order-xl-1">
-              <div className="article-body article-body-fisher">
+              <div className="article-body article-body-fisher pt-xl-0">
                 {article?.image && <ArticleImage image={image} />}
-                {article?.body && <ArticleText body={body} />}
+                {article?.body && <FisherArticleText body={body} />}
+                {article?.id && <ArticleOptions id={id} />}
               </div>
             </Col>
           </Col>
@@ -72,7 +74,7 @@ export default function FisherArticle() {
           <Container>
             <hr />
             <Row>
-              <Col sm={3}>
+              <Col>
                 <p className="text-gray">
                   Author: {article?.author && article.author.name}
                 </p>
@@ -80,9 +82,8 @@ export default function FisherArticle() {
                   Published: {article?.published && article.published}
                 </p>
               </Col>
-              <Col sm={9}>
+              <Col>
                 <p className="font-size-20 fw-bold">Share this article</p>
-                <p></p>
               </Col>
             </Row>
             <Row className="fw-bold">
