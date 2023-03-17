@@ -2,7 +2,7 @@ import React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
 
@@ -20,7 +20,7 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      <MainNav />
+      {/* <MainNav /> */}
       <Routes>
         <Route path="/article/:id" element={<Article />} />
         <Route path="/article/ms/:id" element={<MSArticle />} />

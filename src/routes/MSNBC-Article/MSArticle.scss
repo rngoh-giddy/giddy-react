@@ -6,11 +6,16 @@
         z-index: -1;
         background-color: var(--giddy-primary-blue);
         width: 100%;
-        height: 375px;
+        height: 520px;
+        top: 0px;
         @media only screen and (min-width: 1200px) {
             padding-top: 24px;
-            height: 1200px;
+            height: 728px;
         }
+    }
+
+    .no-show{
+        display: none;
     }
 
     .ads{
@@ -18,6 +23,7 @@
         background-color: gray;
         &.top-ad{
             height: 100px;
+            margin: 55px;
 
             @media only screen and (min-width: 1200px) {
                 height: 250px;
@@ -28,14 +34,27 @@
         }
     }
 
+    .msa-tax-title-deck{
+        margin-bottom: 52px;
+    }
+
     .taxonomy-list{
-        color: var(--giddy-primary-sky);
+        .taxonomy-list-item{
+            color: var(--giddy-primary-sky);
+        }
     }
 
     .Article-Title{
         color: white;
     }
-    .Article-Deck{color: white;}
+    .Article-Deck{
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    .article-deck-below{
+        padding: 0 15px;
+    }
 
     .Article-Hero img{width: 100%;}
     .Article-Deck--italic{font-family: 'Slate Pro Italic';}

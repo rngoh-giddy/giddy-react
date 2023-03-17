@@ -7,12 +7,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// import ArticleHeader from "../Article/ArticleHeader";
-// import ArticleAuthor from "./ArticleAuthorStack";
-// import ArticleImage from "../Article/ArticleImage";
-// import ArticleText from "../Article/ArticleText";
-// import ArticleDeck from "../Article/ArticleDeck";
-
 import ArticleHeader from "../../components/article-components/ArticleHeader";
 import ArticleAuthor from "./ArticleAuthorStack";
 import ArticleImage from "../../components/article-components/ArticleImage";
@@ -28,43 +22,43 @@ export default function MSArticle() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck, taxonomy } = article;
   const { id } = useParams();
-  console.log(article);
+  //console.log(article);
 
   useEffect(() => {
     fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.article);
+        console.log(data.article);
         setArticle(data.article);
       })
       .catch((err) => {
-        console.log(err.message);
+        //console.log(err.message);
       });
-  });
+  },[]);
 
   return (
     <>
     <Container fluid className="msnbc-bg p-0">
       <Container>
         {/* Top Ad */}
-        <Col xl={8} className="ads top-ad mx-auto mb-4">
+        <Col xl={8} className="ads top-ad mx-auto">
           Ad goes here
         </Col>
         
         {/* Title */}
-        <Row className="justify-content-center">
+        <Row className="justify-content-center msa-tax-title-deck">
           <Col xs={12} xl={6}>
-            <div>
+            <div className="taxonomy-list mb-4">
               {
                 taxonomy?.primary.map((el, index) => {
-                  return <a className="taxonomy-list text-slate-pro-condensed-bold" href={`https://getmegiddy.com/taxonomy/term/${el.drupal_id}`}>{el.name}</a>
+                  return <a className="taxonomy-list-item font-size-18 text-slate-pro-condensed-bold" href={`https://getmegiddy.com/taxonomy/term/${el.drupal_id}`}>{el.name}</a>
                 })
               }
             </div>
-            <div className="Article-Title">
+            <div className="Article-Title text-slate-pro-condensed-bold mb-4">
               {article?.title && <ArticleHeader title={title} />}
             </div>
-            <div className="Article-Deck align-items-start">
+            <div className="Article-Deck article-deck-above align-items-start">
               {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
@@ -72,11 +66,11 @@ export default function MSArticle() {
 
         {/* Author and Image */}
         <Row className="justify-content-center">
-          <Col sm={8}>
+          <Col xl={8} className="px-0">
             <div className="Article-Hero">
               {article?.image && <ArticleImage image={image} />}
             </div>
-            <div className="Article-Deck Article-Deck--italic align-items-start mt-4">
+            <div className="Article-Deck Article-Deck--italic article-deck-below text-dark font-size-16 align-items-start my-4">
               {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
@@ -85,7 +79,7 @@ export default function MSArticle() {
 
         {/* Body */}
         <Row xl={2} className="mt-xl-3 col-xl-8 mx-auto">
-          <Col xl={8}>
+          <Col xl={8} className="px-0">
             <div className="Article-Author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
