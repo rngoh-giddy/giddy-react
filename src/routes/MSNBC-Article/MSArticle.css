@@ -31,7 +31,12 @@
   }
 }
 .msnbc-bg .ads.side-ad {
-  height: 600px;
+  height: 50px;
+}
+@media only screen and (min-width: 1200px) {
+  .msnbc-bg .ads.side-ad {
+    height: 600px;
+  }
 }
 .msnbc-bg .msa-tax-title-deck {
   margin-bottom: 52px;
