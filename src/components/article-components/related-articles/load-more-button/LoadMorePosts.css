@@ -1,0 +1,19 @@
+.load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92vw;
+  height: 45px;
+  background: #C8DAFF;
+  border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .load-more {
+    max-width: 825px;
+  }
+}
+.load-more p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #161C45;
+}/*# sourceMappingURL=LoadMorePosts.css.map */
