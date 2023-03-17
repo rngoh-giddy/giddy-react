@@ -16,7 +16,7 @@
 .article-author {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   font-style: normal;
   font-weight: 400;
