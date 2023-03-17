@@ -8,13 +8,14 @@ import "./EsquireArticle.css";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Image from "react-bootstrap/Image";
 
 import ArticleAuthor from "../../components/article-components/ArticleAuthor";
 import ArticleDeck from "../../components/article-components/ArticleDeck";
 import ArticleHeader from "../../components/article-components/ArticleHeader";
 import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
+import RelatedArticlesContainer from "../../components/article-components/related-articles/RelatedArticlesContainer";
+import AuthorInfo from "../../components/article-components/author-info/AuthorInfo";
 
 export default function EsquireArticle() {
   const [article, setArticle] = useState([]);
@@ -88,37 +89,15 @@ export default function EsquireArticle() {
         </Row>
 
         {/* Author, publish, etc. */}
-        <Row>
-          <Container className="author-container">
-            <hr />
-            <Row>
-              <Col className="col-6">
-                <p className="author">Author: <span>{article?.author && article.author.name}</span></p>
-                <p className="published">Published: <span>{article?.published && article.published}</span></p>
-              </Col>
-              <Col className="col-6">
-                <p className="article-share mx-auto">Share this article</p>
-                <Row className="images-row">
-                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png" alt="facebook"/>
-                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png" />
-                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png" />
-                  <Image className="social-icons px-0" src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png" />
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <p className="browse-by-tag">Browse by tag:</p>
-            </Row>
-            <hr />
-          </Container>
-        </Row>
+        <AuthorInfo article={article}/>
 
         {/* Related Articles */}
         <Row>
           <Container className="article-container-flex">
-            <Col className="col-12 col-md-9">
+            <Col>
               <p className="article-related-header">Related Articles</p>
               <hr />
+              {article?.id && <RelatedArticlesContainer id={id} title={title} />}
             </Col>
           </Container>
         </Row>
