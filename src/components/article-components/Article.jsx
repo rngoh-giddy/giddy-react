@@ -8,12 +8,12 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-import Image from "react-bootstrap/Image";
 import ArticleAuthor from "./ArticleAuthor";
 import ArticleDeck from "./ArticleDeck";
 import ArticleHeader from "./ArticleHeader";
 import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
+import AuthorInfo from "./author-info/AuthorInfo";
 import RelatedArticlesContainer from "./related-articles/RelatedArticlesContainer";
 
 export default function Article() {
@@ -89,48 +89,7 @@ export default function Article() {
         </Row>
 
         {/* Author Information */}
-        <Row>
-          <Container className="author-container">
-            <hr />
-            <Row>
-              <Col className="col-6">
-                <p className="author">
-                  Author: <span>{article?.author && article.author.name}</span>
-                </p>
-                <p className="published">
-                  Published:{" "}
-                  <span>{article?.published && article.published}</span>
-                </p>
-              </Col>
-              <Col className="col-6">
-                <p className="article-share mx-auto">Share this article</p>
-                <Row className="images-row">
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png"
-                    alt="facebook"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png"
-                  />
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <p className="browse-by-tag">Browse by tag:</p>
-            </Row>
-            <hr />
-          </Container>
-        </Row>
+        <AuthorInfo article={article}/>
 
         {/* Related Articles */}
         <Row>
