@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import "../../components/article-components/Article.css";
-import "./FisherArticle.css";
 
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";

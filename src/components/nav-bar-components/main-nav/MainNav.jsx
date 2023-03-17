@@ -1,85 +1,65 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-import { useParams } from "react-router-dom";
-
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
 import Image from "react-bootstrap/Image";
 
 import "./MainNav.css";
 
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
+import LevelOneNav from "./LevelOneNav";
 
 export default function MainNav() {
   // console.log(article);
 
-  const [show, setShow] = useState(false);
-  const showDropdown = (e) => {
-    setShow(!show);
-  };
-  const hideDropdown = (e) => {
-    setShow(false);
-  };
-
   return (
-    <div className="site-nav-background">
-      <Container>
-        <Row>
-          <Navbar key="lg" sticky="top" className="mb-3 site-nav">
-            <Container fluid>
-              <Navbar.Brand href="/">
-                <Image
-                  fluid
-                  src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/GMG_Logo.svg"
-                  fill="currentColor"
-                  className="site-logo"
-                ></Image>
-              </Navbar.Brand>
-              <NavDropdown
-                title="Sexual Health"
-                id="collasible-nav-dropdown"
-                show={show}
-                onMouseEnter={showDropdown}
-                onMouseLeave={hideDropdown}
-              >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown
-                title="Diseases & Disorders"
-                id="collasible-nav-dropdown"
-              >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown
-                title="Culture & Lifestyle"
-                id="collasible-nav-dropdown"
-              >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Videos" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Action</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#features">Shop</Nav.Link>
-              <Nav.Link href="#features">Sign in</Nav.Link>
-            </Container>
-          </Navbar>
-        </Row>
-      </Container>
+    <div className="site-nav-container">
+      <div className="site-nav-background fixed-top">
+        <Container>
+          <Row>
+            <Navbar key="lg" sticky="top" className="mb-3 site-nav">
+              <Container>
+                <Navbar.Brand href="/">
+                  <Image
+                    fluid
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/GMG_Logo.svg"
+                    fill="currentColor"
+                    className="site-logo"
+                  ></Image>
+                </Navbar.Brand>
+                <div className="site-nav-dropdown">
+                  <div className="site-nav-dropdown-header">
+                    Sexual Health{" "}
+                    <Image src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/dropdown_down_arrow.svg" />
+                  </div>
+                  <div className="site-nav-dropdown-content">
+                    <a href="#">
+                      Breast Health
+                      <Image src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/dropdown_right_arrow.svg" />
+                    </a>
+                    <a href="#">Endometriosis</a>
+                    <a href="#">Erectile Dysfunction</a>
+                  </div>
+                </div>
+
+                <LevelOneNav
+                  nav_title="Sexual Health"
+                  className=""
+                ></LevelOneNav>
+                <LevelOneNav nav_title="Diseases & Disorders"></LevelOneNav>
+                <LevelOneNav nav_title="Culture & Lifestyle"></LevelOneNav>
+                <LevelOneNav nav_title="Videos"></LevelOneNav>
+                <Nav.Link href="#features">Shop</Nav.Link>
+                <Nav.Link href="#features">Sign in</Nav.Link>
+              </Container>
+            </Navbar>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }

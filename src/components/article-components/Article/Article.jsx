@@ -1,8 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
-import "./Article.css";
+import { useParams } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -13,22 +12,13 @@ import ArticleAuthor from "./ArticleAuthor";
 import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
 import ArticleDeck from "./ArticleDeck";
-import { Image } from "react-bootstrap";
-import { Helmet } from "react-helmet";
+import Image from "react-bootstrap/Image";
 
 export default function Article() {
   const [article, setArticle] = useState([]);
   const { author, title, body, image, deck } = article;
   const { id } = useParams();
   console.log(article);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/scripts/AdButlerSnippet.js";
-    script.async = true;
-    document.body.appendChild(script);
-  });
 
   useEffect(() => {
     fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
@@ -42,45 +32,41 @@ export default function Article() {
       });
   }, []);
 
+  const script = document.createElement("script");
+  script.src = "ad_served.js";
+  script.async = true;
+  script.onload = () => this.scriptLoaded();
+
+  document.body.appendChild(script);
+
   return (
     <>
       <Container fluid>
         <Row>
-          <Col sm={1}></Col>
-          <Col sm={10}>
-            <Helmet></Helmet>
-            <a
-              href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602"
-              target="_blank"
-            >
-              <video>
-                <source
-                  src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x250;setID=598602;type=img;click=CLICK_MACRO_PLACEHOLDER"
-                  type="video/mp4"
-                ></source>
-              </video>
-            </a>
-
-            <a
-              href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602"
-              target="_blank"
-            >
-              <img
-                src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x250;setID=598602;type=img;click=CLICK_MACRO_PLACEHOLDER"
-                width="970"
-                height="250"
-              />
-            </a>
-          </Col>
+          <Col></Col>
+          <amp-ad
+            type="adbutler"
+            data-account="185102"
+            data-zone="598602"
+          ></amp-ad>
+          <a
+            href="https://servedbyadbutler.com/go2/;ID=185102;size=728x90;setID=598030"
+            target="_blank"
+          >
+            <img
+              src="https://servedbyadbutler.com/getad.img/;libID=3756107"
+              width="728"
+              height="90"
+            />
+          </a>
         </Row>
-        <Col sm={1}></Col>
         <Row>
           <Col sm={1}></Col>
           <Col sm={10}>
-            <div className="article-title">
+            <div className="Article-Title">
               {article?.title && <ArticleHeader title={title} />}
             </div>
-            <div className="article-deck">
+            <div className="Article-Deck">
               {article?.deck && <ArticleDeck deck={deck} />}
             </div>
           </Col>
@@ -89,15 +75,15 @@ export default function Article() {
         <Row>
           <Col sm={3}></Col>
           <Col sm={6}>
-            <div className="article-author">
+            <div className="Article-Author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
               )}
             </div>
-            <div className="article-hero">
+            <div className="Article-Hero">
               {article?.image && <ArticleImage image={image} />}
             </div>
-            <div className="article-body">
+            <div className="Article-Body">
               {article?.body && <ArticleText body={body} />}
             </div>
           </Col>

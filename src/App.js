@@ -12,6 +12,7 @@ import ThemeProvider from "react-bootstrap/ThemeProvider";
 import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import MainFooter from "./components/footer-components/main-footer/MainFooter";
 import FisherArticle from "./routes/Fisher-Article/FisherArticle";
+import ChatPrompts from "./routes/Chat-Prompts/ChatPrompts";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/article/:id" element={<Article />} />
         <Route path="/article/ms/:id" element={<Article />} />
         <Route path="/article/fi/:id" element={<FisherArticle />} />
+        <Route path="/prompt" element={<ChatPrompts />} />
       </Routes>
 
       <MainFooter />
