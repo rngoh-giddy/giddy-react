@@ -22,4 +22,10 @@
 }
 .esquire-container .article-body h2 {
   font-size: 28px;
-}/*# sourceMappingURL=EsquireArticle.css.map */
+} /*# sourceMappingURL=EsquireArticle.css.map */
+
+.esquire-container .top-ad-banner {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
