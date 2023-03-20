@@ -15,12 +15,13 @@ import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
 import AuthorInfo from "./author-info/AuthorInfo";
 import RelatedArticlesContainer from "./related-articles/RelatedArticlesContainer";
+import Breadcrumbs from "./breadcrumbs/Breadcrumbs";
 
 export default function Article() {
   const [article, setArticle] = useState([]);
-  const { author, title, body, image, deck } = article;
+  const { author, title, body, image, deck, taxonomy } = article;
   const { id } = useParams();
-  // console.log(article);
+  console.log(article);
 
   useEffect(() => {
     fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
@@ -34,7 +35,7 @@ export default function Article() {
       });
   }, []);
 
-  console.log("id: ", id, "title: ", title);
+  // console.log("id: ", id, "title: ", title);
   
   return (
     <>
@@ -58,6 +59,9 @@ export default function Article() {
             />
           </a>
         </Row>
+
+        {/* Breadcrumbs */}
+        {article?.taxonomy && ( <Breadcrumbs taxonomy={taxonomy} /> )}
 
         {/* Article Header */}
         <Row>

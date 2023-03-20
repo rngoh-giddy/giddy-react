@@ -16,10 +16,12 @@ import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
 import RelatedArticlesContainer from "../../components/article-components/related-articles/RelatedArticlesContainer";
 import AuthorInfo from "../../components/article-components/author-info/AuthorInfo";
+import Breadcrumbs from "../../components/article-components/breadcrumbs/Breadcrumbs";
+import { Breadcrumb } from "react-bootstrap";
 
 export default function EsquireArticle() {
   const [article, setArticle] = useState([]);
-  const { author, title, body, image, deck } = article;
+  const { author, title, body, image, deck, taxonomy } = article;
   const { id } = useParams();
   console.log(article);
 
@@ -58,6 +60,9 @@ export default function EsquireArticle() {
             />
           </a>
         </Row>
+
+        {/* Breadcrumbs */}
+        {article?.taxonomy && ( <Breadcrumbs taxonomy={taxonomy} /> )}
 
         {/* Title and Deck */}
         <Row className="esquire-title-and-deck-row">
