@@ -1,17 +1,27 @@
 @import url("./FontSize.min.css");
 @import url("./SlateIvyFonts.min.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
 
 :root{
   --giddy-primary-blue: #161C45;
   --giddy-primary-sky: #D3E2FF;
+
+  --giddy-light-gray: #F9F9F9;
+  --giddy-mid-gray: #BABABA;
+  --giddy-gray: #D3D3D3;
+
+  --custom-black: #282828;
+
 }
 
-.taxonomy-list{
+.text-dark{color: var(--custom-black)!important;}
+
+.taxonomy-list-item{
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.taxonomy-list:not(:last-child)::after{
+.taxonomy-list-item:not(:last-child)::after{
   content: ' > '
 }
 .App {

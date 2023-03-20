@@ -16,7 +16,7 @@ function Quiz({quizClass, targetQuiz}) {
     //* Current question object
     let currentQuestion =  questions[currentIndex]; 
     
-    //* State that determins if answer has been selected, allowing user to continue
+    //* State that determines if answer has been selected, allowing user to continue
     let [checked, setChecked] = useState(false);
 
     //* Checks is user can go to next question
@@ -59,13 +59,13 @@ function Quiz({quizClass, targetQuiz}) {
     return (  
         <>
             <div className={classList}>
-                <h2 className='text-slate-pro-bold'>{currentQuestion?.text}</h2>
+                <h2>{currentQuestion?.text}</h2>
                 <div className="d-flex flex-column gap-2 mb-3">
                     {ansList}
                 </div>
 
                 <div className="d-flex justify-content-between">
-                    <button onClick={decreaseIndex} disabled={(currentIndex == 0)?true:false} className='text-slate-pro-medium p-2 quiz-button quiz-button-prev d-inline-block'>Prev question</button>
+                    <button onClick={decreaseIndex} disabled={(currentIndex === 0)?true:false} className='text-slate-pro-medium p-2 quiz-button quiz-button-prev d-inline-block'>Prev question</button>
                     <button onClick={increaseIndex} disabled={!checked} className='text-slate-pro-medium p-2 quiz-button quiz-button-next d-inline-block'>Next question</button>
                 </div>
             </div>

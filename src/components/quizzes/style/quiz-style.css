@@ -6,14 +6,25 @@
   --bg-color: var(--giddy-primary-blue);
   --text-color: white;
   --button-color: var(--giddy-primary-sky);
+  --selected-color: white;
+  --circle-color: white;
+  --disabled-color: #8e99af;
+  --title-text: "Slate Pro Bold";
 }
-.inline-quiz.red {
-  --bg-color: red;
-  --text-color: blue;
-  --button-color: white;
+.inline-quiz.gray {
+  --bg-color: var(--giddy-light-gray);
+  --text-color: #282828;
+  --button-color: var(--giddy-gray);
+  --selected-color: var(--giddy-gray);
+  --circle-color: var(--giddy-mid-gray);
+  --disabled-color: #b1afaf;
+  --title-text: "IvyPresto Display - Semi";
 }
 .inline-quiz h2, .inline-quiz label {
   color: var(--text-color);
+}
+.inline-quiz h2:not(label), .inline-quiz label:not(label) {
+  font-family: var(--title-text);
 }
 .inline-quiz .quiz-ans-block {
   border: solid 1.5px var(--text-color);
@@ -33,7 +44,7 @@
   background-color: transparent;
 }
 .inline-quiz .quiz-ans-block [type=radio]:checked:after {
-  background-color: white;
+  background-color: var(--selected-color);
 }
 .inline-quiz .quiz-button {
   transition: all 0.2s ease;
@@ -48,7 +59,7 @@
   color: var(--bg-color);
 }
 .inline-quiz .quiz-button:disabled {
-  background-color: #8e99af;
+  background-color: var(--disabled-color);
 }
 
 .prevent-select, .inline-quiz h2, .inline-quiz label {
@@ -67,5 +78,5 @@
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 2px solid white;
+  border: 2px solid var(--circle-color);
 }/*# sourceMappingURL=quiz-style.css.map */
