@@ -5,6 +5,7 @@
 :root{
   --giddy-primary-blue: #161C45;
   --giddy-primary-sky: #D3E2FF;
+  --giddy-tidal-blue: #307FE2;
 
   --giddy-light-gray: #F9F9F9;
   --giddy-mid-gray: #BABABA;
@@ -15,6 +16,7 @@
 }
 
 .text-dark{color: var(--custom-black)!important;}
+.text-tidal{color: var(--giddy-tidal-blue);}
 
 .taxonomy-list-item{
   text-decoration: none;

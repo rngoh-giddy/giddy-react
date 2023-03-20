@@ -12,11 +12,12 @@ import ArticleAuthor from "./ArticleAuthorStack";
 import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
 import ArticleDeck from "../../components/article-components/ArticleDeck";
+import RelatedArticlesContainer from "./RelatedArticlesContainer";
 
 import Quiz from "../../components/quizzes/quiz-object"
 import TestQuiz from '../../components/quizzes/test-quiz';
 
-import "./MSArticle.css";
+import "./MSArticle.scss";
 
 export default function MSArticle() {
   const [article, setArticle] = useState([]);
@@ -78,7 +79,7 @@ export default function MSArticle() {
 
 
         {/* Body */}
-        <Row xl={2} className="mt-xl-3 col-xl-8 mx-auto">
+        <Row xl={2} className="mt-xl-3 col-xl-8 mx-auto justify-content-between">
           <Col xl={8} className="px-0">
             <div className="Article-Author">
               {article?.author && (
@@ -103,14 +104,24 @@ export default function MSArticle() {
             <hr />
           </Col>
 
-          <Col xl={3} className="ads side-ad">Ad goes here</Col>
+          <Col xl={3} className="ads side-ad d-none d-xl-block">Ad goes here</Col>
         </Row>
+
+        <Col xl={10} className="ads bottom-ad mx-auto mx-xl-0 my-5">
+          Ad goes here
+        </Col>
 
         {/* Related Articles */}
         <Row>
           <Container>
-            <p>Related Articles</p>
+            <div className="giddy-daily-title-container d-xl-flex gap-xl-5">
+              <h2 className="giddy-daily-title m-0 text-slate-pro-condensed-bold font-size-40 text-uppercase">Giddy Daily</h2>
+              <p className="giddy-daily-tag m-0 col-xl-5">Catch up on more stories from Giddy featuring the top voices and opinions driving today's conversation</p>
+            </div>
             <hr />
+            {article?.id && (
+              <RelatedArticlesContainer id={id} title={title} />
+            )}
           </Container>
         </Row>
       </Container>

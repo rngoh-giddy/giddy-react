@@ -22,7 +22,7 @@ function App() {
       breakpoints={["xxxl", "xxl", "xl", "lg", "md", "sm", "xs", "xxs"]}
       minBreakpoint="xxs"
     >
-      {/* <MainNav /> */}
+      <MainNav />
       <Routes>
         <Route path="/article/:id" element={<Article />} />
         <Route path="/article/ms/:id" element={<MSArticle />} />
