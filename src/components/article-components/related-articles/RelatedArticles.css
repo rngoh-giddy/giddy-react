@@ -39,6 +39,7 @@
 }
 .related-article-container .related-article-text-container .article-author {
   font-style: italic;
+  align-items: baseline;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;

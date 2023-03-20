@@ -1,21 +1,24 @@
 import React from "react";
 import { useEffect, useState } from "react";
-
-import { useParams } from "react-router-dom";
+import LoadMorePosts from "./load-more-button/LoadMorePosts";
 
 import "./RelatedArticles.css";
 
 export default function RelatedArticlesContainer({ id, title }) {
-  const [related_articles, getRelatedArticles] = useState([]);
+  const [related_articles, setRelatedArticles] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [pageNumber, setPageNumber] = useState(1);
 
-  useEffect(() => {
+  const fetchRelatedArticles = () => {
+    console.log("fetching articles")
+    setLoading(true);
     fetch(`https://api.getmegiddyapi.com/search-articles`, {
       method: "POST",
       body: JSON.stringify({
         id: id,
         search: `${title}`,
-        page_size: 5,
-        page_number: 1,
+        page_size: 3,
+        page_number: pageNumber,
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -23,35 +26,46 @@ export default function RelatedArticlesContainer({ id, title }) {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.articles);
-        getRelatedArticles(data.articles);
+        const prevArticles = related_articles;
+        const articleResults = pageNumber === 1 ? data?.articles : data?.articles.slice(1, 4);
+        setRelatedArticles([...prevArticles, ...articleResults]);
+        setPageNumber(pageNumber + 1);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err.message);
+        setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchRelatedArticles();
   }, []);
-  console.log("related_articles: ", related_articles);
 
   return (
     <div className="related-articles-container">
-      {related_articles.slice(0, 4).map((article, index) => (
-        <div
-          className="related-article-container d-flex flex-column-reverse flex-lg-row mb-4"
-          key={index}
-        >
-          <img className="mx-auto mb-3 mb-lg-auto my-lg-auto" src={article?.image} alt="giddy" />
-          <div className="related-article-text-container mx-auto pt-3">
-            <p className="taxonomy mb-lg-2">
-              {article?.taxonomy.associated.length
-                ? article?.taxonomy.associated[0]?.name
-                : article?.taxonomy.primary[0]?.name}
-            </p>
-            <h3>{article?.title}</h3>
-            <p className="article-author py-0">By {article?.author.name}</p>
-            <p className="article-deck">{article?.deck}</p>
+      {related_articles?.map((article, index) => (
+        <a href={article.url} key={index}>
+          <div className="related-article-container d-flex flex-column-reverse flex-lg-row mb-4">
+            <img
+              className="mx-auto mb-3 mb-lg-auto my-lg-auto"
+              src={article?.image}
+              alt="giddy"
+            />
+            <div className="related-article-text-container mx-auto pt-3">
+              <p className="taxonomy mb-lg-2">
+                {article?.taxonomy.associated.length
+                  ? article?.taxonomy.associated[0]?.name
+                  : article?.taxonomy.primary[0]?.name}
+              </p>
+              <h3>{article?.title}</h3>
+              <p className="article-author py-0">By {article?.author.name}</p>
+              <p className="article-deck">{article?.deck}</p>
+            </div>
           </div>
-        </div>
+        </a>
       ))}
+      <LoadMorePosts loading={loading} loadMore={fetchRelatedArticles} />
     </div>
   );
 }

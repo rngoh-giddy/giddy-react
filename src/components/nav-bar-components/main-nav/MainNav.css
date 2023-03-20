@@ -1,3 +1,7 @@
+.site-nav-container {
+  height: 60px;
+}
+
 .site-nav {
   color: #ffffff;
   font-family: "Stale Pro";
@@ -8,6 +12,64 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+}
+
+.site-nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.site-nav-dropdown-header {
+  color: #ffffff;
+  font-family: "Stale Pro";
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.site-nav-dropdown-content {
+  left: 0;
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  color: #4d555e;
+  right: 0;
+  background-color: #ffffff;
+  width: 195px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  font-family: "Slate Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.site-nav-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #3185fc;
+  fill: #3185fc;
+}
+
+.site-nav-dropdown:hover .site-nav-dropdown-content {
+  display: block;
+}
+
+.site-nav-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: block;
+}
+
+.site-nav-dropdown-item {
+  padding: 0%;
+}
+
+.site-nav-container {
+  height: 60px;
 }
 
 .site-nav-background {

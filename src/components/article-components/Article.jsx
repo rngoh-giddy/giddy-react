@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import "./Article.css";
@@ -8,12 +8,12 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
-import Image from "react-bootstrap/Image";
 import ArticleAuthor from "./ArticleAuthor";
 import ArticleDeck from "./ArticleDeck";
 import ArticleHeader from "./ArticleHeader";
 import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
+import AuthorInfo from "./author-info/AuthorInfo";
 import RelatedArticlesContainer from "./related-articles/RelatedArticlesContainer";
 
 export default function Article() {
@@ -21,6 +21,14 @@ export default function Article() {
   const { author, title, body, image, deck } = article;
   const { id } = useParams();
   // console.log(article);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/scripts/AdButlerSnippet.js";
+    script.async = true;
+    document.body.appendChild(script);
+  });
 
   useEffect(() => {
     fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
@@ -35,31 +43,16 @@ export default function Article() {
   }, []);
 
   console.log("id: ", id, "title: ", title);
-  
+
   return (
     <>
       <Container fluid className="article-container">
         {/* ad butler */}
         <Row>
-          <amp-ad
-            type="adbutler"
-            data-account="185102"
-            data-zone="598602"
-          ></amp-ad>
-
-          <a
-            href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602"
-            target="_blank"
-          >
-            <img
-              src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x250;setID=598602;type=img;click=CLICK_MACRO_PLACEHOLDER"
-              width="970"
-              height="250"
-            />
-          </a>
+          <Col sm={1}></Col>
+          <Col sm={10}></Col>
         </Row>
-
-        {/* Article Header */}
+        <Col sm={1}></Col>
         <Row>
           <Col className="col-lg-7 mx-auto">
             <div className="article-title">
@@ -89,48 +82,7 @@ export default function Article() {
         </Row>
 
         {/* Author Information */}
-        <Row>
-          <Container className="author-container">
-            <hr />
-            <Row>
-              <Col className="col-6">
-                <p className="author">
-                  Author: <span>{article?.author && article.author.name}</span>
-                </p>
-                <p className="published">
-                  Published:{" "}
-                  <span>{article?.published && article.published}</span>
-                </p>
-              </Col>
-              <Col className="col-6">
-                <p className="article-share mx-auto">Share this article</p>
-                <Row className="images-row">
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png"
-                    alt="facebook"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png"
-                  />
-                  <Image
-                    className="social-icons px-0"
-                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png"
-                  />
-                </Row>
-              </Col>
-            </Row>
-            <Row>
-              <p className="browse-by-tag">Browse by tag:</p>
-            </Row>
-            <hr />
-          </Container>
-        </Row>
+        <AuthorInfo article={article} />
 
         {/* Related Articles */}
         <Row>
@@ -138,7 +90,9 @@ export default function Article() {
             <Col>
               <p className="article-related-header">Related Articles</p>
               <hr />
-              {article?.id && <RelatedArticlesContainer id={id} title={title} />}
+              {article?.id && (
+                <RelatedArticlesContainer id={id} title={title} />
+              )}
             </Col>
           </Container>
         </Row>
