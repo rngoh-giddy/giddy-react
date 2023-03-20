@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import "./Article.css";
@@ -23,6 +23,14 @@ export default function Article() {
   // console.log(article);
 
   useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/scripts/AdButlerSnippet.js";
+    script.async = true;
+    document.body.appendChild(script);
+  });
+
+  useEffect(() => {
     fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
       .then((res) => res.json())
       .then((data) => {
@@ -35,31 +43,16 @@ export default function Article() {
   }, []);
 
   console.log("id: ", id, "title: ", title);
-  
+
   return (
     <>
       <Container fluid className="article-container">
         {/* ad butler */}
         <Row>
-          <amp-ad
-            type="adbutler"
-            data-account="185102"
-            data-zone="598602"
-          ></amp-ad>
-
-          <a
-            href="https://servedbyadbutler.com/go2/;ID=185102;size=970x250;setID=598602"
-            target="_blank"
-          >
-            <img
-              src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x250;setID=598602;type=img;click=CLICK_MACRO_PLACEHOLDER"
-              width="970"
-              height="250"
-            />
-          </a>
+          <Col sm={1}></Col>
+          <Col sm={10}></Col>
         </Row>
-
-        {/* Article Header */}
+        <Col sm={1}></Col>
         <Row>
           <Col className="col-lg-7 mx-auto">
             <div className="article-title">
@@ -89,7 +82,7 @@ export default function Article() {
         </Row>
 
         {/* Author Information */}
-        <AuthorInfo article={article}/>
+        <AuthorInfo article={article} />
 
         {/* Related Articles */}
         <Row>
@@ -97,7 +90,9 @@ export default function Article() {
             <Col>
               <p className="article-related-header">Related Articles</p>
               <hr />
-              {article?.id && <RelatedArticlesContainer id={id} title={title} />}
+              {article?.id && (
+                <RelatedArticlesContainer id={id} title={title} />
+              )}
             </Col>
           </Container>
         </Row>

@@ -1,0 +1,8 @@
+.added-padding {
+  padding: 3%;
+}
+
+.scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}

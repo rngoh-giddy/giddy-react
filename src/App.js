@@ -14,6 +14,7 @@ import MainNav from "./components/nav-bar-components/main-nav/MainNav";
 import EsquireArticle from "./routes/esquire-article/EsquireArticle";
 import FisherArticle from "./routes/Fisher-Article/FisherArticle";
 import MSArticle from "./routes/MSNBC-Article/MSArticle";
+import ChatPrompts from "./routes/Chat-Prompts/ChatPrompts";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/article/ms/:id" element={<MSArticle />} />
         <Route path="/article/fi/:id" element={<FisherArticle />} />
         <Route path="/article/esq/:id" element={<EsquireArticle />} />
+        <Route path="/prompt" element={<ChatPrompts />} />
       </Routes>
 
       <MainFooter />
