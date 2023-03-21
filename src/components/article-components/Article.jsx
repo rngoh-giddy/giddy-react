@@ -44,7 +44,7 @@ export default function Article() {
   }, []);
 
   // console.log("id: ", id, "title: ", title);
-  
+
   return (
     <>
       <Container fluid className="article-container">
@@ -55,7 +55,7 @@ export default function Article() {
         </Row>
 
         {/* Breadcrumbs */}
-        {article?.taxonomy && ( <Breadcrumbs taxonomy={taxonomy} /> )}
+        {article?.taxonomy && <Breadcrumbs taxonomy={taxonomy} />}
 
         {/* Article Header */}
         <Row>

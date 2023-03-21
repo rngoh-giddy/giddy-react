@@ -29,7 +29,7 @@ export default function MainFooter() {
               <Image
                 src="https://getmegiddy.com/themes/custom/gmg_theme/logo.svg"
                 fill="currentColor"
-                className="site-logo"
+                className="site-footer-logo-image"
               ></Image>
             </Col>
             <Col sm={6} className="site-footer-tag-line">

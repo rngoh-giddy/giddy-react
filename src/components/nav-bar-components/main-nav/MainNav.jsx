@@ -23,34 +23,45 @@ export default function MainNav() {
           <Row>
             <Navbar key="lg" sticky="top" className="mb-3 site-nav">
               <Container>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="https://getmegiddy.com">
                   <Image
-                    fluid
                     src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/GMG_Logo.svg"
                     fill="currentColor"
                     className="site-logo"
                   ></Image>
                 </Navbar.Brand>
-                <div className="site-nav-dropdown">
+                <div className="site-nav-dropdown d-none d-lg-block">
                   <div className="site-nav-dropdown-header">
                     Sexual Health{" "}
                     <Image src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/dropdown_down_arrow.svg" />
                   </div>
                   <div className="site-nav-dropdown-content">
-                    <a href="#">
+                    <a
+                      href="#"
+                      className="site-nav-dropdown-item site-nav-dropdown-header"
+                    >
                       Breast Health
-                      <Image src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/dropdown_right_arrow.svg" />
+                      <Image
+                        className="site-nav-dropdown-item-image"
+                        src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/dropdown_right_arrow.svg"
+                      />
                     </a>
+
                     <a href="#">Endometriosis</a>
                     <a href="#">Erectile Dysfunction</a>
                   </div>
                 </div>
-
-                <LevelOneNav
-                  nav_title="Sexual Health"
-                  className=""
-                ></LevelOneNav>
-                <LevelOneNav nav_title="Diseases & Disorders"></LevelOneNav>
+                <div className="site-nav-dropdown d-none d-lg-block">
+                  <div className="site-nav-dropdown-header">
+                    Diseases & Disorders{" "}
+                    <Image src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/dropdown_down_arrow.svg" />
+                  </div>
+                  <div className="site-nav-dropdown-content">
+                    <a href="#">Breast Health</a>
+                    <a href="#">Endometriosis</a>
+                    <a href="#">Erectile Dysfunction</a>
+                  </div>
+                </div>
                 <LevelOneNav nav_title="Culture & Lifestyle"></LevelOneNav>
                 <LevelOneNav nav_title="Videos"></LevelOneNav>
                 <Nav.Link href="#features">Shop</Nav.Link>
