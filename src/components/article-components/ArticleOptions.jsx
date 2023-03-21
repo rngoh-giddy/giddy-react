@@ -33,17 +33,20 @@ export default function ArticleOptions({
   }, []);
 
   return (
-    <Container className="article-options">
-      <Row>
-        <Col sm={6} className="mx-auto article-options-bg">
-          <h1 className="pb-2 pt-3 font-size-32">MORE FROM GIDDY</h1>
-          {articles.slice(0, 2).map((article) => (
-            <div className="col-7" key={article.id}>
-              <img
-                id="article-options-img"
-                src={article?.image || propsImage}
-                alt={article?.title || propsTitle}
-              />
+    <div className="article-options">
+      <Col className="mx-auto article-options-bg">
+        <h1 className="pb-2 pt-3 ps-3 mb-4 font-size-32">MORE FROM GIDDY</h1>
+        {articles.slice(0, 2).map((article) => (
+          <div
+            className="col-11 col-lg-10 col-xl-6 d-flex gap-2 mt-4 ms-3"
+            key={article.id}
+          >
+            <img
+              id="article-options-img"
+              src={article?.image || propsImage}
+              alt={article?.title || propsTitle}
+            />
+            <div>
               <h3 className="article-options-taxonomy font-size-14">
                 {article?.taxonomy.primary[0].name}
               </h3>
@@ -51,9 +54,9 @@ export default function ArticleOptions({
                 {article?.title || propsTitle}
               </h3>
             </div>
-          ))}
-        </Col>
-      </Row>
-    </Container>
+          </div>
+        ))}
+      </Col>
+    </div>
   );
 }

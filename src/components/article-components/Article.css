@@ -160,6 +160,20 @@
   color: #282828;
 }
 
+@media screen and (min-width: 375px) {
+    .article-options-bg{
+        width: 345px;
+        height: 327px;
+    } 
+}
+@media screen and (min-width: 1200px) {
+    .article-options-bg{
+        width: 540px;
+        height: 196px;
+    } 
+}
+
+
 .article-options h1{
     border-top: 10px solid #307FE2;
     border-bottom: 1px dotted;
@@ -180,5 +194,6 @@
 #article-options-img{
     width: 90px;
     height: 90px;
+    margin-left: unset;
 }
 /*# sourceMappingURL=Article.css.map */
