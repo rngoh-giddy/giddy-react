@@ -32,11 +32,11 @@ export default function MSArticle() {
       .then((data) => {
         console.log(data.article);
         setArticle(data.article);
+        renderQuiz(); 
       })
       .catch((err) => {
         //console.log(err.message);
       });
-      renderQuiz();
   },[]);
 
   function renderQuiz() {
