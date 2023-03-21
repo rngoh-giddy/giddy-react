@@ -18,7 +18,7 @@ import RelatedArticlesContainer from "./RelatedArticlesContainer";
 import Quiz from "../../components/quizzes/quiz-object";
 import TestQuiz from "../../components/quizzes/test-quiz";
 
-import "./MSArticle.scss";
+import "./style/MSArticle.scss";
 
 export default function MSArticle() {
   const [article, setArticle] = useState([]);
