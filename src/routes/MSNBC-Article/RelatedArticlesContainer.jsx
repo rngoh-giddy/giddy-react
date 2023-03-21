@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import GiddyDailyArticleLink from "./GiddyDailyArticleLink";
 
 import './RelatedArticlesContainer.scss';
 
@@ -16,7 +17,7 @@ export default function RelatedArticlesContainer({ id, title }) {
       body: JSON.stringify({
         id: id,
         search: `${title}`,
-        page_size: 3,
+        page_size: 6,
         page_number: pageNumber,
       }),
       headers: {
@@ -44,27 +45,15 @@ export default function RelatedArticlesContainer({ id, title }) {
   return (
     <div className="giddy-daily-parent d-flex flex-wrap gap-4 gap-xl-1 justify-content-between">
       {/* Uses slice to only get the first 6 elements */}
-      {related_articles?.slice(0,6).map((article, index) => (
-        <a className="col-md-5 col-xl-3" href={article.url} key={index}>
-          <div className="giddy-daily-container flex-xl-row mb-4 justify-content-center">
-            <div className="giddy-daily-text-container pt-3">
-              {/* Number */}
-              <h3 className="giddy-daily-number text-ivy-light-italic font-size-32">{index + 1}.</h3>
-
-              <div className="giddy-daily-titlle-title-container">
-                {/* Taxonomy */}
-                <p className="taxonomy mb-lg-2 text-slate-pro-condensed text-tidal font-size-16">
-                  {article?.taxonomy.associated.length
-                    ? article?.taxonomy.associated[0]?.name
-                    : article?.taxonomy.primary[0]?.name}
-                </p>
-
-                {/* Title */}
-                <h3 className="text-slate-pro-bold font-size-16">{article?.title}</h3>
-              </div>
-            </div>
-          </div>
-        </a>
+      {related_articles?.map((article, index) => (
+        <GiddyDailyArticleLink
+          url={article.url}
+          index={index}
+          length={article?.taxonomy.associated.length}
+          aName={article?.taxonomy.associated[0]?.name}
+          pName={article?.taxonomy.primary[0]?.name}
+          title={article?.title}
+        />
       ))}
     </div>
   );
