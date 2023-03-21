@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom/client";
 
 import { useParams } from "react-router-dom";
 
@@ -34,14 +35,19 @@ export default function EsquireArticle() {
       .then((data) => {
         // console.log(data.article);
         setArticle(data.article);
+        renderQuiz();
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
-  const root = document.getElementById("react-quiz-embed");
-  root.render(<Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />);
-  console.log(root);
+
+  function renderQuiz() {
+    const quizDiv = ReactDOM.createRoot(
+      document.getElementById("react-quiz-embed")
+    );
+    quizDiv.render(<Quiz quizClass={"gray"} targetQuiz={TestQuiz.questions} />);
+  }
 
   return (
     <>
@@ -169,7 +175,6 @@ export default function EsquireArticle() {
               height="50"
             />
           </a>
-          <Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />
         </Row>
       </Container>
     </>
