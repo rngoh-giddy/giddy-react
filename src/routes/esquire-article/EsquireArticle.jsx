@@ -40,8 +40,8 @@ export default function EsquireArticle() {
       });
   }, []);
   const root = document.getElementById("react-quiz-embed");
-  root.render(<Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />);
-  console.log(root);
+  //root.render(<Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />);
+  //console.log(root);
 
   return (
     <>
