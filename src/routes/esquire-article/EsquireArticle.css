@@ -32,7 +32,7 @@
 
 .sticky-nav {
   position: sticky;
-  top: 350px;
-  height: 100%;
+  top: 60px;
+  display: inline-block;
   z-index: 1;
 }
