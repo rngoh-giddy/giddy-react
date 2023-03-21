@@ -29,3 +29,10 @@
   justify-content: center;
   padding: 2%;
 }
+
+.sticky-nav {
+  position: sticky;
+  top: 350px;
+  height: 100%;
+  z-index: 1;
+}

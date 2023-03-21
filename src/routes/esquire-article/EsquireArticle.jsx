@@ -20,6 +20,7 @@ import Quiz from "../../components/quizzes/quiz-object";
 import TestQuiz from "../../components/quizzes/test-quiz";
 import Breadcrumbs from "../../components/article-components/breadcrumbs/Breadcrumbs";
 import { Breadcrumb } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 
 export default function EsquireArticle() {
   const [article, setArticle] = useState([]);
@@ -38,6 +39,9 @@ export default function EsquireArticle() {
         console.log(err.message);
       });
   }, []);
+  const root = document.getElementById("react-quiz-embed");
+  root.render(<Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />);
+  console.log(root);
 
   return (
     <>
@@ -76,20 +80,27 @@ export default function EsquireArticle() {
 
         {/* Article Image and Body */}
         <Row>
-          <Col className="col-lg-7 mx-auto">
+          <Col className="col-lg-8 mx-auto">
             <div className="article-author">
               {article?.author && (
                 <ArticleAuthor author={author} published={article.published} />
               )}
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="col-lg-3 mx-auto"></Col>
+          <Col className="col-lg-6 mx-auto">
             <div className="article-hero">
               {article?.image && <ArticleImage image={image} />}
             </div>
-            <Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />
             <div className="article-body">
               {article?.body && <ArticleText body={body} />}
             </div>
+          </Col>
+          <Col className="col-lg-3 mx-auto">
             <a
+              className="sticky-nav"
               href="https://servedbyadbutler.com/go2/;ID=185102;size=190x600;setID=598603"
               target="_blank"
             >
@@ -99,21 +110,16 @@ export default function EsquireArticle() {
                 height="600"
               />
             </a>
-            <a
-              href="https://servedbyadbutler.com/go2/;ID=185102;size=320x50;setID=598604"
-              target="_blank"
-            >
-              <img
-                src="https://servedbyadbutler.com/adserve/;ID=185102;size=320x50;setID=598604;type=img;click=CLICK_MACRO_PLACEHOLDER"
-                width="320"
-                height="50"
-              />
-            </a>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="col-lg-10 mx-auto top-ad-banner">
             <a
               href="https://servedbyadbutler.com/go2/;ID=185102;size=970x90;setID=598605"
               target="_blank"
             >
-              <img
+              <Image
+                fluid
                 src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x90;setID=598605;type=img;click=CLICK_MACRO_PLACEHOLDER"
                 width="970"
                 height="90"
@@ -136,6 +142,34 @@ export default function EsquireArticle() {
               )}
             </Col>
           </Container>
+        </Row>
+        <Row>
+          <Col className="col-lg-10 mx-auto top-ad-banner">
+            <a
+              href="https://servedbyadbutler.com/go2/;ID=185102;size=970x90;setID=598605"
+              target="_blank"
+            >
+              <Image
+                fluid
+                src="https://servedbyadbutler.com/adserve/;ID=185102;size=970x90;setID=598605;type=img;click=CLICK_MACRO_PLACEHOLDER"
+                width="970"
+                height="90"
+              />
+            </a>
+          </Col>
+        </Row>
+        <Row>
+          <a
+            href="https://servedbyadbutler.com/go2/;ID=185102;size=320x50;setID=598604"
+            target="_blank"
+          >
+            <img
+              src="https://servedbyadbutler.com/adserve/;ID=185102;size=320x50;setID=598604;type=img;click=CLICK_MACRO_PLACEHOLDER"
+              width="320"
+              height="50"
+            />
+          </a>
+          <Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />
         </Row>
       </Container>
     </>
