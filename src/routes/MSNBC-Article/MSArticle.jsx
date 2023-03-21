@@ -18,7 +18,9 @@ import RelatedArticlesContainer from "./RelatedArticlesContainer";
 import Quiz from "../../components/quizzes/quiz-object";
 import TestQuiz from "../../components/quizzes/test-quiz";
 
+
 import "./style/MSArticle.scss";
+import ArticleOptions from "./ArticleOptions";
 
 export default function MSArticle() {
   const [article, setArticle] = useState([]);
@@ -105,6 +107,8 @@ export default function MSArticle() {
                   />
                 )}
               </div>
+
+              {article?.id && <ArticleOptions id={id}/>}
 
               <div className="Article-Body Article-Body--MSA Article-Body--left-align">
                 {article?.body && <ArticleText body={body} />}
