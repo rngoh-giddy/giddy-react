@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom/client";
 import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
@@ -35,7 +36,17 @@ export default function MSArticle() {
       .catch((err) => {
         //console.log(err.message);
       });
+      renderQuiz();
   },[]);
+
+  function renderQuiz() {
+    const quizDiv = ReactDOM.createRoot(document.getElementById("react-quiz-embed"));
+    quizDiv.render(
+      <Quiz quizClass={'blue'} targetQuiz={TestQuiz.questions}/>
+    )
+  }
+
+  
 
   return (
     <>
@@ -87,7 +98,7 @@ export default function MSArticle() {
                 )}
             </div>
 
-            <Quiz quizClass={'blue'} targetQuiz={TestQuiz.questions}/>
+            
 
             <div className="Article-Body Article-Body--MSA Article-Body--left-align">
               {article?.body && <ArticleText body={body} />}
