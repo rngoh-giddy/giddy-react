@@ -35,10 +35,10 @@ export default function ArticleOptions({
   return (
     <div className="article-options">
       <Col className="mx-auto article-options-bg">
-        <h1 className="pb-2 pt-3 ps-3 mb-4 font-size-32">MORE FROM GIDDY</h1>
+        <h1 className="pb-2 pt-3 ps-3 font-size-32">MORE FROM GIDDY</h1>
         {articles.slice(0, 2).map((article) => (
           <div
-            className="col-11 col-lg-10 col-xl-6 d-flex gap-2 mt-4 ms-3"
+            className="col-11 col-lg-10 col-xl-6 d-inline-flex gap-2 mt-3 ms-3"
             key={article.id}
           >
             <img
