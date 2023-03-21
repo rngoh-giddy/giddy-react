@@ -11,7 +11,7 @@
   --disabled-color: #8e99af;
   --title-text: "Slate Pro Bold";
 }
-.inline-quiz.gray {
+.inline-quiz.gray, .inline-quiz.grey {
   --bg-color: var(--giddy-light-gray);
   --text-color: #282828;
   --button-color: var(--giddy-gray);
