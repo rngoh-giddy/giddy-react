@@ -5,9 +5,11 @@
 }
 .breadcrumb-container a {
   font-style: normal;
+  font-family: "Slate Pro";
+  text-decoration: none;
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
-  color: #307FE2;
+  color: #307fe2;
   white-space: nowrap;
-}/*# sourceMappingURL=Breadcrumbs.css.map */
+} /*# sourceMappingURL=Breadcrumbs.css.map */

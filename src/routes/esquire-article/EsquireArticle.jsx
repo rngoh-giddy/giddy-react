@@ -30,12 +30,14 @@ export default function EsquireArticle() {
   console.log(article);
 
   useEffect(() => {
-    fetch(`https://api.getmegiddyapi.com/article/drupal/${id}`)
+    fetch(`https://api.getmegiddyapi.com/article/drupal/${id}/split`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data.article);
         setArticle(data.article);
+        console.log(article);
         renderQuiz();
+        renderAd();
       })
       .catch((err) => {
         console.log(err.message);
@@ -49,12 +51,32 @@ export default function EsquireArticle() {
     quizDiv.render(<Quiz quizClass={"gray"} targetQuiz={TestQuiz.questions} />);
   }
 
+  function renderAd() {
+    const adDiv = ReactDOM.createRoot(
+      document.getElementById("ad-butler-ad-embed")
+    );
+    adDiv.render(
+      <div className="top-ad-banner">
+        <a
+          href="https://servedbyadbutler.com/go2/;ID=185102;size=320x50;setID=598604"
+          target="_blank"
+        >
+          <img
+            src="https://servedbyadbutler.com/adserve/;ID=185102;size=320x50;setID=598604;type=img;click=CLICK_MACRO_PLACEHOLDER"
+            width="320"
+            height="50"
+          />
+        </a>
+      </div>
+    );
+  }
+
   return (
     <>
       <Container fluid className="esquire-container">
         {/* ad butler */}
         <Row fluid className="">
-          <Col className="col-lg-10 mx-auto embed-responsive top-ad-banner">
+          <Col className="col-lg-10 d-none d-lg-flex d-md-flex mx-auto embed-responsive top-ad-banner">
             <iframe
               width="970"
               height="250"
@@ -96,17 +118,44 @@ export default function EsquireArticle() {
         </Row>
         <Row>
           <Col className="col-lg-3 mx-auto"></Col>
-          <Col className="col-lg-6 mx-auto">
+          <Col className="col-lg-6 col-md-10 col-sm-10 mx-auto">
             <div className="article-hero">
               {article?.image && <ArticleImage image={image} />}
             </div>
             <div className="article-body">
-              {article?.body && <ArticleText body={body} />}
+              {article?.body && <ArticleText body={body[0]} />}
+              <div className="top-ad-banner d-none d-lg-block d-md-block">
+                <a
+                  href="https://servedbyadbutler.com/go2/;ID=185102;size=320x50;setID=598604"
+                  target="_blank"
+                >
+                  <img
+                    src="https://servedbyadbutler.com/adserve/;ID=185102;size=320x50;setID=598604;type=img;click=CLICK_MACRO_PLACEHOLDER"
+                    width="320"
+                    height="50"
+                  />
+                </a>
+              </div>
+              <div className="top-ad-banner d-block d-sm-none d-xs-none">
+                <a
+                  href="https://servedbyadbutler.com/go2/;ID=185102;size=320x50;setID=598604"
+                  target="_blank"
+                >
+                  <img
+                    src="https://servedbyadbutler.com/adserve/;ID=185102;size=320x50;setID=598604;type=img;click=CLICK_MACRO_PLACEHOLDER"
+                    width="320"
+                    height="50"
+                  />
+                </a>
+              </div>
+              {article?.body && <ArticleText body={body[1]} />}
+              <Quiz quizClass={"gray"} targetQuiz={TestQuiz.questions} />
+              {article?.body && <ArticleText body={body[2]} />}
             </div>
           </Col>
           <Col className="col-lg-3 mx-auto">
             <a
-              className="sticky-nav"
+              className="sticky-nav d-none d-lg-flex"
               href="https://servedbyadbutler.com/go2/;ID=185102;size=190x600;setID=598603"
               target="_blank"
             >
@@ -150,7 +199,7 @@ export default function EsquireArticle() {
           </Container>
         </Row>
         <Row>
-          <Col className="col-lg-10 mx-auto top-ad-banner">
+          <Col className="col-lg-10 mx-auto d-none d-lg-flex d-md-flex top-ad-banner">
             <a
               href="https://servedbyadbutler.com/go2/;ID=185102;size=970x90;setID=598605"
               target="_blank"
@@ -163,18 +212,6 @@ export default function EsquireArticle() {
               />
             </a>
           </Col>
-        </Row>
-        <Row>
-          <a
-            href="https://servedbyadbutler.com/go2/;ID=185102;size=320x50;setID=598604"
-            target="_blank"
-          >
-            <img
-              src="https://servedbyadbutler.com/adserve/;ID=185102;size=320x50;setID=598604;type=img;click=CLICK_MACRO_PLACEHOLDER"
-              width="320"
-              height="50"
-            />
-          </a>
         </Row>
       </Container>
     </>
