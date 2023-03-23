@@ -9,6 +9,11 @@
     .article-title h1 {
         font-size: 35px;
         margin: 0 auto 20px;
+        font-family: 'IvyPresto Display';
+        font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 130%;
     }
     
     .article-deck div { 
@@ -23,10 +28,11 @@
 
     .article-body {
         padding-top: 30px;
-        font-family: unset;
+        font-family: 'Slate Pro';
     }
 
     .article-body h2 {
         font-size: 28px;
+        font-family: 'IvyPresto Display';
     }
 }
