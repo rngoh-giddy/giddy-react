@@ -1,6 +1,3 @@
-@import url("./FontSize.min.css");
-@import url("./SlateIvyFonts.min.css");
-@import url("bootstrap/dist/css/bootstrap.min.css");
 
 :root{
   --giddy-primary-blue: #161C45;
@@ -10,13 +7,15 @@
   --giddy-light-gray: #F9F9F9;
   --giddy-mid-gray: #BABABA;
   --giddy-gray: #D3D3D3;
+  --giddy-white: ##F3F3F3;
 
   --custom-black: #282828;
-
 }
 
-.text-dark{color: var(--custom-black)!important;}
-.text-tidal{color: var(--giddy-tidal-blue);}
+@import url("./components/style-util/FontSize.min.css");
+@import url("./components/style-util/SlateIvyFonts.min.css");
+@import url("./components/style-util/colors.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
 
 .taxonomy-list-item{
   text-decoration: none;

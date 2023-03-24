@@ -1,7 +1,26 @@
 .more-from-giddy{
     border-top: solid 8px var(--giddy-tidal-blue);
+    margin: 40px 0;
+    padding-bottom: 28px;
+    
+    @media only screen and (min-width: 1200px) {
+        padding-bottom: 25px;
+    }
 
-    h2{
-        border-bottom: dashed 1px;
+    .more-from-giddy-bg{
+
+        .more-from-giddy-title{
+            border-bottom: dashed 1px;
+            margin-bottom: 27px;
+            padding: 10px 0 7px;
+        }
+
+        .more-from-giddy-article-container{
+            gap: 38px;
+
+            @media only screen and (min-width: 1200px) {
+                gap: 16px;
+            }
+        }
     }
 }
