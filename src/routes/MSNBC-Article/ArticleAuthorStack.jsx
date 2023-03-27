@@ -4,14 +4,8 @@ import Stack from 'react-bootstrap/Stack';
 export default function ArticleAuthor({ author, published }) {
   return (
     <Stack gap={2}>
-      <style>{`
-          .aa-stack{
-            font-size: 20px;
-          }
-        `}
-      </style>
-      <div>{published} </div>
-      <div className='aa-stack fw-bold'>Written by: {author?.name} | </div>
+      <div className='font-size-12'>{published} </div>
+      <div className='font-size-20 text-slate-pro-medium'>Written by: {author?.name} | </div>
     </Stack>
   )
 }

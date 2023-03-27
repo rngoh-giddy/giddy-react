@@ -7,6 +7,11 @@
 .esquire-container .article-title h1 {
   font-size: 35px;
   margin: 0 auto 20px;
+  font-family: "IvyPresto Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 130%;
 }
 .esquire-container .article-deck div {
   text-align: center;
@@ -22,4 +27,18 @@
 }
 .esquire-container .article-body h2 {
   font-size: 28px;
-}/*# sourceMappingURL=EsquireArticle.css.map */
+} /*# sourceMappingURL=EsquireArticle.css.map */
+
+.esquire-container .top-ad-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 60px;
+  display: inline-block;
+  z-index: 1;
+}

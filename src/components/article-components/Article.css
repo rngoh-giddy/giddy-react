@@ -110,4 +110,42 @@ a {
   line-height: 130%;
   /* identical to box height, or 52px */
   color: #282828;
-}/*# sourceMappingURL=Article.css.map */
+}
+
+@media screen and (min-width: 375px) {
+    .article-options-bg{
+        width: 345px;
+        height: 327px;
+    } 
+}
+@media screen and (min-width: 1200px) {
+    .article-options-bg{
+        width: 540px;
+        height: 196px;
+    } 
+}
+
+
+.article-options h1{
+    border-top: 10px solid #307FE2;
+    border-bottom: 1px dotted;
+    text-align: left;
+}
+
+.article-options-bg{
+    background-color: #F3F3F3;
+}
+
+.article-options-taxonomy{
+    color: #307FE2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+
+#article-options-img{
+    width: 90px;
+    height: 90px;
+    margin-left: unset;
+}
+/*# sourceMappingURL=Article.css.map */

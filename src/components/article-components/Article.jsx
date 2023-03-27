@@ -15,12 +15,13 @@ import ArticleImage from "./ArticleImage";
 import ArticleText from "./ArticleText";
 import AuthorInfo from "./author-info/AuthorInfo";
 import RelatedArticlesContainer from "./related-articles/RelatedArticlesContainer";
+import Breadcrumbs from "./breadcrumbs/Breadcrumbs";
 
 export default function Article() {
   const [article, setArticle] = useState([]);
-  const { author, title, body, image, deck } = article;
+  const { author, title, body, image, deck, taxonomy } = article;
   const { id } = useParams();
-  // console.log(article);
+  console.log(article);
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -42,7 +43,7 @@ export default function Article() {
       });
   }, []);
 
-  console.log("id: ", id, "title: ", title);
+  // console.log("id: ", id, "title: ", title);
 
   return (
     <>
@@ -52,7 +53,11 @@ export default function Article() {
           <Col sm={1}></Col>
           <Col sm={10}></Col>
         </Row>
-        <Col sm={1}></Col>
+
+        {/* Breadcrumbs */}
+        {article?.taxonomy && <Breadcrumbs taxonomy={taxonomy} />}
+
+        {/* Article Header */}
         <Row>
           <Col className="col-lg-7 mx-auto">
             <div className="article-title">
