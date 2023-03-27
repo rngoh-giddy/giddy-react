@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createPortal } from 'react-dom';
 import { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
@@ -35,19 +36,19 @@ export default function MSArticle() {
       .then((data) => {
         console.log(data.article);
         setArticle(data.article);
-        renderQuiz(); 
+        //renderQuiz(); 
       })
       .catch((err) => {
         //console.log(err.message);
       });
-  },[]);
+  },[id]);
 
-  function renderQuiz() {
-    const quizDiv = ReactDOM.createRoot(
-      document.getElementById("react-quiz-embed")
-    );
-    quizDiv.render(<Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />);
-  }
+  // function renderQuiz() {
+  //   const quizDiv = ReactDOM.createRoot(
+  //     document.getElementById("react-quiz-embed")
+  //   );
+  //   quizDiv.render(<Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />);
+  // }
 
   return (
     <>
@@ -115,6 +116,11 @@ export default function MSArticle() {
                 {article?.body && <ArticleText body={body} />}
               </div>
             </Col>
+
+            {createPortal(
+              <Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />,
+              document.getElementById("react-quiz-embed")
+            )}
 
             <Col xl={3} className="ads side-ad d-none d-xl-block">
               Ad goes here
