@@ -117,10 +117,10 @@ export default function MSArticle() {
               </div>
             </Col>
 
-            {createPortal(
+            {/* {createPortal(
               <Quiz quizClass={"blue"} targetQuiz={TestQuiz.questions} />,
               document.getElementById("react-quiz-embed")
-            )}
+            )} */}
 
             <Col xl={3} className="ads side-ad d-none d-xl-block">
               Ad goes here
