@@ -14,11 +14,14 @@ import ArticleImage from "../../components/article-components/ArticleImage";
 import ArticleText from "../../components/article-components/ArticleText";
 import ArticleDeck from "../../components/article-components/ArticleDeck";
 import RelatedArticlesContainer from "./RelatedArticlesContainer";
+import AuthorInfo from "./AuthorInfo";
 
 import Quiz from "../../components/quizzes/quiz-object";
 import TestQuiz from "../../components/quizzes/test-quiz";
 
-import "./MSArticle.scss";
+
+import "./style/MSArticle.scss";
+import ArticleOptions from "./ArticleOptions";
 
 export default function MSArticle() {
   const [article, setArticle] = useState([]);
@@ -106,28 +109,22 @@ export default function MSArticle() {
                 )}
               </div>
 
+              {article?.id && <ArticleOptions id={id}/>}
+
               <div className="Article-Body Article-Body--MSA Article-Body--left-align">
                 {article?.body && <ArticleText body={body} />}
               </div>
-              <hr />
-              <div className="Article-Author">
-                {article?.author && (
-                  <ArticleAuthor
-                    author={author}
-                    published={article.published}
-                  />
-                )}
-              </div>
-              <Row>
-                <p>Browse by tag:</p>
-              </Row>
-              <hr />
             </Col>
 
             <Col xl={3} className="ads side-ad d-none d-xl-block">
               Ad goes here
             </Col>
+          
           </Row>
+          
+          {/* Author, publish, etc. */}
+          <AuthorInfo article={article} />
+
 
           <Col xl={10} className="ads bottom-ad mx-auto mx-xl-0 my-5">
             Ad goes here

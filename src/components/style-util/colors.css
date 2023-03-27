@@ -1,0 +1,8 @@
+/* #region Texgt Colors */
+.text-dark{color: var(--custom-black)!important;}
+.text-tidal{color: var(--giddy-tidal-blue);}
+/* #endregion */
+
+/* #region Background Colors */
+.bg-c-white{background-color: var(--giddy-white);}
+/* #endregion */
