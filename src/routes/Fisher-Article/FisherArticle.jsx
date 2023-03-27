@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 
 import "../../components/article-components/Article.css";
 
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import { Image, Col, Container, Row } from "react-bootstrap";
 
 import ArticleOptions from "../../components/article-components/ArticleOptions";
 import ArticleImage from "../../components/article-components/ArticleImage";
@@ -15,6 +13,7 @@ import FisherArticleAuthor from "./FisherArticleAuthor";
 import FisherArticleDeck from "./FisherArticleDeck";
 import FisherArticleHeader from "./FisherArticleHeader";
 import FisherArticleText from "./FisherArticleText";
+import RelatedArticlesContainer from "../../components/article-components/related-articles/RelatedArticlesContainer";
 
 export default function FisherArticle() {
   const [article, setArticle] = useState([]);
@@ -69,32 +68,61 @@ export default function FisherArticle() {
             </Col>
           </Col>
         </Row>
+
+        {/* Author, publish, etc. */}
         <Row>
-          <Container>
+          <Container className="author-container">
             <hr />
             <Row>
-              <Col>
-                <p className="text-gray">
-                  Author: {article?.author && article.author.name}
+              <Col className="col-6">
+                <p className="author">
+                  Author: <span>{article?.author && article.author.name}</span>
                 </p>
-                <p className="text-gray">
-                  Published: {article?.published && article.published}
+                <p className="published">
+                  Published:{" "}
+                  <span>{article?.published && article.published}</span>
                 </p>
               </Col>
-              <Col>
-                <p className="font-size-20 fw-bold">Share this article</p>
+              <Col className="col-6">
+                <p className="article-share mx-auto">Share this article</p>
+                <Row className="images-row">
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/facebook_article_share.png"
+                    alt="facebook"
+                  />
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/twitter_article_share.png"
+                  />
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/instagram_article_share.png"
+                  />
+                  <Image
+                    className="social-icons px-0"
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/linkdin_article_share.png"
+                  />
+                </Row>
               </Col>
             </Row>
-            <Row className="fw-bold">
-              <p>Browse by tag:</p>
+            <Row>
+              <p className="browse-by-tag">Browse by tag:</p>
             </Row>
             <hr />
           </Container>
         </Row>
+
+        {/* Related Articles */}
         <Row>
-          <Container>
-            <p>Related Articles</p>
-            <hr />
+          <Container className="article-container-flex">
+            <Col>
+              <p className="article-related-header">Related Articles</p>
+              <hr />
+              {article?.id && (
+                <RelatedArticlesContainer id={id} title={title} />
+              )}
+            </Col>
           </Container>
         </Row>
       </Container>
