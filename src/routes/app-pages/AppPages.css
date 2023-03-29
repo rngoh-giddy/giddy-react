@@ -1,0 +1,296 @@
+.app-pages-container .article-title {
+  text-align: center;
+}
+.app-pages-container h1 {
+  font-size: 28px;
+  font-family: "IvyMode";
+  font-weight: 700;
+  line-height: 110%;
+}
+.app-pages-container p {
+  font-size: 14px;
+  font-family: "Slate Pro";
+  line-height: 130%;
+}
+.app-pages-container h2 {
+  font-size: 18px;
+  font-family: "Slate Pro";
+  line-height: 130%;
+  font-weight: 700;
+}
+.app-pages-container ul > li {
+  font-family: "Slate Pro";
+  font-size: 14px;
+  line-height: 130%;
+}
+.app-pages-container .title-container h1 {
+  font-size: 28px;
+  font-family: "IvyMode";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+.app-pages-container .content-container p {
+  font-size: 18px;
+}
+.app-pages-container .article-deck div {
+  text-align: center;
+  margin: 0 auto;
+}
+.app-pages-container .article-author div {
+  text-align: center;
+  margin: 0 auto;
+}
+.app-pages-container .article-body {
+  padding-top: 30px;
+  font-family: unset;
+}
+.app-pages-container .article-body h2 {
+  font-size: 28px;
+} /*# sourceMappingURL=app-pagesArticle.css.map */
+
+.app-pages-container .top-ad-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.app-pages-container .container-padding {
+  padding: 2rem 0.5rem;
+}
+.app-pages-container .container-margin {
+  margin-top: 2rem;
+}
+.app-pages-container .badge-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  flex-direction: row;
+}
+.app-pages-container .badge-container div {
+  padding: 2%;
+}
+.app-pages-container .hero-image {
+  width: 100%;
+}
+.app-pages-container .video-container {
+  background-color: #d3e2ff;
+  /* padding: 6% 2%;   */
+}
+.app-pages-container .video-container h1 {
+  font-family: "IvyMode";
+  font-size: 22px;
+  line-height: 130%;
+  text-align: center;
+}
+.app-pages-container .video-container p {
+  font-family: "Slate Pro";
+  line-height: 130%;
+  font-size: 16px;
+  text-align: center;
+}
+.app-pages-container .video-container .video-link {
+  font-size: 18px;
+  font-weight: 700;
+}
+.app-pages-container .video-container .video-player {
+  height: 193px;
+  width: 100%;
+  background-color: #1E1E1E;
+}
+.app-pages-container .carousel-image-container {
+  width: 100%;
+}
+.app-pages-container .carousel-image {
+  width: 100%;
+}
+.app-pages-container .save-container {
+  margin: auto;
+  background-color: #F8F8F8;
+  padding-bottom: 3rem;
+  z-index: 2;
+}
+.app-pages-container .image-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.app-pages-container .slider-container {
+  /* display: block; */
+  width: 80%;
+  max-width: 640px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.app-pages-container .slider-text-content {
+  text-align: start;
+}
+.app-pages-container .slider-text-content p {
+  font-size: 14px;
+}
+.app-pages-container .btn-prev, .app-pages-container .btn-next {
+  width: 32px;
+  height: 32px;
+  background-color: #E9E9E9;
+  color: #686F77;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-pages-container .outer-position {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.app-pages-container .personalize-container {
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.app-pages-container .background {
+  position: absolute;
+  z-index: 1;
+  top: 55%;
+  left: -4rem;
+  width: 200%;
+}
+.app-pages-container .personalize-container img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  z-index: 3;
+}
+.app-pages-container .personalize-container h1 {
+  line-height: 130%;
+}
+.app-pages-container .personalize-container p {
+  font-size: 16px;
+}
+.sticky-nav {
+  position: sticky;
+  top: 60px;
+  display: inline-block;
+  z-index: 1;
+}
+.text-align-start {
+  text-align: start;
+}
+.text-align-center {
+  text-align: center;
+}
+.justify-content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 576px) {
+  .app-pages-container .badge-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+  .app-pages-container .title-container h1 {
+    font-size: 34px;
+  }
+  .app-pages-container .video-container h1 {
+    font-size: 32px;
+  }
+  .app-pages-container .video-container p {
+    font-size: 18px;
+  }
+  .app-pages-container .answers-container {
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+  }
+  .app-pages-container .save-container .save-container-content {
+    max-width: 60%;
+  }
+  .app-pages-container .background {
+    left: -4rem;
+    width: 140%;
+  }
+  .app-pages-container .slider-container {
+    max-width: 264px;
+  }
+  .app-pages-container .hero-image {
+    max-width: 330px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: center;
+    text-align: start;
+  }
+  .app-pages-container .title-container h1 {
+    font-size: 26px;
+  }
+  .app-pages-container .video-container .header-content {
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  .app-pages-container .video-container h1 {
+    font-size: 22px;
+    text-align: start;
+  }
+  .app-pages-container .video-container p {
+    font-size: 16px;
+    text-align: start;
+  }
+  .app-pages-container .video-container .video-link {
+    text-align: start;
+  }
+  .app-pages-container .answers-container {
+    max-width: 88%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+  }
+  .app-pages-container .image-carousel {
+    width: 100%;
+  }
+  .app-pages-container .carousel-image-container {
+  }
+  .app-pages-container .save-container .save-container-content {
+    max-width: 60%;
+  }
+  .app-pages-container .background {
+    left: -4rem;
+    width: 140%;
+  }
+  .app-pages-container .slider-container {
+    max-width: 264px;
+  }
+  .app-pages-container .hero-image {
+    max-width: 330px;
+  }
+}
