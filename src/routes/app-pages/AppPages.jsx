@@ -1,7 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import ReactDOM from "react-dom/client";
-
-import { useParams } from "react-router-dom";
 
 import "../../components/article-components/Article.css";
 import "slick-carousel/slick/slick.css";
@@ -9,9 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./AppPages.css";
 
 import Slider from "react-slick";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 
 import { BiChevronLeft, BiChevronRight, BiPlayCircle } from "react-icons/bi";
 
@@ -63,6 +57,7 @@ export default function AppPages() {
       <div className="app-pages-container">
         <div className="header col-lg-10 col-md-11 col-12 mx-auto col-sm-9">
           <div className="header-content col-md-6">
+
             {/* Temp div for Giddy Icon */}
               <div className="icon col-lg-10 col-11 col-md-12 mx-auto col-sm-12">
                 <div
@@ -75,6 +70,7 @@ export default function AppPages() {
                   }}
                 ></div>
               </div>
+
             {/* Title */}
             <div className="app-pages-title-and-deck-row">
               <div className="col-lg-10 mx-auto text-align-start col-11 col-sm-12">
@@ -93,6 +89,7 @@ export default function AppPages() {
                 </div>
               </div>
             </div>
+
             {/* Play Store Badges */}
               <div className="mx-auto text-align-center col-lg-10 col-10 col-sm-12 col-md-10 badge-container">
                 <div className="d-none d-sm-none d-md-inline-block">
@@ -130,6 +127,7 @@ export default function AppPages() {
                 <br />
               </div>
           </div>
+
           {/* Hero Image */}
           <div className="d-none d-sm-none d-md-flex col-md-6 hero-image-container">
             <img
@@ -152,12 +150,9 @@ export default function AppPages() {
                 Thousands of medically-reviewed Giddy articles are the
                 foundation for your sexual health queries.
               </p>
-              {/* <br /> */}
-              {/* <div> */}
               <p className="video-link d-xs-flex d-sm-flex">
                 <BiPlayCircle /> Watch Demo
               </p>
-              {/* </div> */}
               <div className="video-player d-xs-flex d-sm-flex d-md-none"></div>
             </div>
             <div className="video-player-container col-md-6 d-none d-sm-none d-md-flex">
@@ -165,6 +160,7 @@ export default function AppPages() {
             </div>
           </div>
         </div>
+
         {/* Get Answers */}
         <div className="container-padding answers-container">
           <div className="header mx-auto justify-content-center">
@@ -174,18 +170,12 @@ export default function AppPages() {
                 width={"100%"}
                 src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_get_answers.png"
               />
-              {/* <img
-                className="d-xs-block d-sm-block d-md-none"
-                width={"100%"}
-                src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_get_answers_mobile.png"
-              /> */}
             </div>
             <img
               className="d-xs-block d-sm-block d-md-none"
               width={"100%"}
               src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_get_answers_mobile.png"
             />
-            {/* <Col className="col-md-6"> */}
             <div className="answers-content-container col-md-6 col-sm-8 col-11">
               <h1>Get answers in seconds</h1>
               <p>
@@ -200,9 +190,9 @@ export default function AppPages() {
                 <li>Breast cancer</li>
               </ul>
             </div>
-            {/* </Col> */}
           </div>
         </div>
+        
         {/* Save and personalize */}
         <div className="outer-position row">
           <div className="container-padding save-container">

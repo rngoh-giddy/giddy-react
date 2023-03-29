@@ -256,6 +256,7 @@
     width: 150%;
   }
 }
+
 @media screen and (min-width: 768px) {
   .app-pages-container .badge-container {
     display: flex;
@@ -435,6 +436,7 @@
   }
   .app-pages-container .image-carousel {
     width: 100%;
+    justify-content: center;
   }
   .app-pages-container .carousel-image-container {
     display: flex !important;
