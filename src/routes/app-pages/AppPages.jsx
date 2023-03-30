@@ -57,19 +57,16 @@ export default function AppPages() {
       <div className="app-pages-container">
         <div className="header col-lg-10 col-md-11 col-12 mx-auto col-sm-9">
           <div className="header-content col-md-6">
-
             {/* Temp div for Giddy Icon */}
-              <div className="icon col-lg-10 col-11 col-md-12 mx-auto col-sm-12">
-                <div
-                  style={{
-                    border: "1px solid black",
-                    backgroundColor: "lightblue",
-                    borderRadius: "5px",
-                    width: 63,
-                    height: 63,
-                  }}
-                ></div>
-              </div>
+            <div className="icon col-lg-10 col-11 col-md-12 mx-auto col-sm-12">
+              <img
+                src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_icon.png"
+                style={{
+                  width: 63,
+                  height: 63,
+                }}
+              />
+            </div>
 
             {/* Title */}
             <div className="app-pages-title-and-deck-row">
@@ -91,41 +88,41 @@ export default function AppPages() {
             </div>
 
             {/* Play Store Badges */}
-              <div className="mx-auto text-align-center col-lg-10 col-10 col-sm-12 col-md-10 badge-container">
-                <div className="d-none d-sm-none d-md-inline-block">
-                  <a href="#">
-                    <img
-                      height={50}
-                      src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_apple.png"
-                    />
-                  </a>
-                </div>
-                <div className="d-none d-sm-none d-md-inline-block">
-                  <a href="#">
-                    <img
-                      height={50}
-                      src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_android.png"
-                    />
-                  </a>
-                </div>
-                <div className="d-xs-block d-sm-block d-md-none">
-                  <a href="#">
-                    <img
-                      height={50}
-                      src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_apple_mobile.png"
-                    />
-                  </a>
-                </div>
-                <div className="d-xs-block d-sm-block d-md-none">
-                  <a href="#">
-                    <img
-                      height={50}
-                      src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_android_mobile.png"
-                    />
-                  </a>
-                </div>
-                <br />
+            <div className="mx-auto text-align-center col-lg-10 col-10 col-sm-12 col-md-10 badge-container">
+              <div className="d-none d-sm-none d-md-inline-block">
+                <a href="#">
+                  <img
+                    height={50}
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_apple.png"
+                  />
+                </a>
               </div>
+              <div className="d-none d-sm-none d-md-inline-block">
+                <a href="https://play.google.com/store/apps/details?id=com.ask_giddy&pli=1" target="_blank">
+                  <img
+                    height={50}
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_android.png"
+                  />
+                </a>
+              </div>
+              <div className="d-xs-block d-sm-block d-md-none">
+                <a href="#">
+                  <img
+                    height={50}
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_apple_mobile.png"
+                  />
+                </a>
+              </div>
+              <div className="d-xs-block d-sm-block d-md-none">
+                <a href="https://play.google.com/store/apps/details?id=com.ask_giddy&pli=1" target="_blank">
+                  <img
+                    height={50}
+                    src="https://getmegiddy-bucket.s3.us-east-2.amazonaws.com/app_landing_page/app_landing_page_android_mobile.png"
+                  />
+                </a>
+              </div>
+              <br />
+            </div>
           </div>
 
           {/* Hero Image */}
@@ -151,7 +148,7 @@ export default function AppPages() {
                 foundation for your sexual health queries.
               </p>
               <p className="video-link d-xs-flex d-sm-flex">
-                <BiPlayCircle /> Watch Demo
+                <BiPlayCircle className="video-play-button" /> Watch Demo
               </p>
               <div className="video-player d-xs-flex d-sm-flex d-md-none"></div>
             </div>
@@ -162,7 +159,7 @@ export default function AppPages() {
         </div>
 
         {/* Get Answers */}
-        <div className="container-padding answers-container">
+        <div className="answers-container">
           <div className="header mx-auto justify-content-center">
             <div className="header-content col-md-6">
               <img
@@ -192,7 +189,7 @@ export default function AppPages() {
             </div>
           </div>
         </div>
-        
+
         {/* Save and personalize */}
         <div className="outer-position row">
           <div className="container-padding save-container">
@@ -209,7 +206,7 @@ export default function AppPages() {
                   className="btn-prev"
                   onClick={() => slider?.current?.slickPrev()}
                 >
-                  <BiChevronLeft />
+                  <BiChevronLeft className="slider-button" />
                 </div>
                 <div className="slider-container">
                   <Slider ref={slider} {...settings}>
@@ -220,7 +217,7 @@ export default function AppPages() {
                   className="btn-next"
                   onClick={() => slider?.current?.slickNext()}
                 >
-                  <BiChevronRight />
+                  <BiChevronRight className="slider-button" />
                 </div>
               </div>
             </div>

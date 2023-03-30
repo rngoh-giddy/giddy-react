@@ -1,160 +1,177 @@
-.app-pages-container .icon {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.icon {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-.app-pages-container .article-title {
+.article-title {
   text-align: center;
 }
-.app-pages-container h1 {
+h1 {
   font-size: 28px;
   font-family: "IvyMode";
   font-weight: 700;
   line-height: 110%;
 }
-.app-pages-container p {
+p {
   font-size: 14px;
   font-family: "Slate Pro";
   line-height: 130%;
 }
-.app-pages-container h2 {
+h2 {
   font-size: 18px;
   font-family: "Slate Pro";
   line-height: 130%;
   font-weight: 700;
 }
-.app-pages-container ul > li {
+ul > li {
   font-family: "Slate Pro";
   font-size: 14px;
   line-height: 130%;
 }
-.app-pages-container .title-container h1 {
+.title-container h1 {
   font-size: 28px;
   font-family: "IvyMode";
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
 }
-.app-pages-container .content-container p {
+.content-container p {
   font-size: 18px;
 }
-.app-pages-container .article-deck div {
+.article-deck div {
   text-align: center;
   margin: 0 auto;
 }
-.app-pages-container .article-author div {
+.article-author div {
   text-align: center;
   margin: 0 auto;
 }
-.app-pages-container .article-body {
+.article-body {
   padding-top: 30px;
   font-family: unset;
 }
-.app-pages-container .article-body h2 {
+.article-body h2 {
   font-size: 28px;
 }
 
-.app-pages-container .top-ad-banner {
+.top-ad-banner {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2%;
 }
-.app-pages-container .container-padding {
-  padding: 2rem 0.5rem;
+.container-padding {
+  padding: 2.5rem 0rem;
 }
-.app-pages-container .container-margin {
+.container-margin {
   margin-top: 2rem;
 }
-.app-pages-container .badge-container {
+.badge-container {
   justify-content: space-around;
   flex-direction: row;
 }
-.app-pages-container .badge-container a {
+.badge-container a {
   width: 100%;
 }
-.app-pages-container .badge-container img {
+.badge-container img {
   width: auto;
 }
-.app-pages-container .badge-container div {
-  padding: 2%;
+.badge-container div {
+  padding: 0.5rem;
 }
-.app-pages-container .hero-image {
+.hero-image {
   width: 100%;
   justify-content: center;
 }
-.app-pages-container .video-container {
+.video-container {
   background-color: #d3e2ff;
 }
-.app-pages-container .video-container h1 {
+.video-container h1 {
   font-family: "IvyMode";
   font-size: 22px;
   line-height: 130%;
   text-align: center;
 }
-.app-pages-container .video-container p {
+.video-container p {
   font-family: "Slate Pro";
   line-height: 130%;
   font-size: 16px;
   text-align: center;
 }
-.app-pages-container .video-container .video-link {
+.video-container .video-link {
   font-size: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-.app-pages-container .video-container .video-player {
+.video-container .video-play-button {
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+}
+.video-container .video-player {
   height: 193px;
   width: 100%;
   background-color: #1E1E1E;
 }
-.app-pages-container .answers-container {
+.answers-container {
   position: relative;
   width: 100%;
   margin: auto;
+  padding-top: 3rem;
 }
-.app-pages-container .answers-container .header {
+.answers-container .header {
   align-items: center;
   flex-direction: column;
 }
-.app-pages-container .answers-content-container {
+.answers-content-container {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
 }
-.app-pages-container .carousel-image-container {
+.carousel-image-container {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+.carousel-image-container img {
+  max-width: 200px;
+  align-self: center;
+}
+.carousel-image {
   width: 100%;
 }
-.app-pages-container .carousel-image {
-  width: 100%;
-}
-.app-pages-container .save-container {
+.save-container {
   margin: auto;
   background-color: #F8F8F8;
   padding-bottom: 3rem;
   z-index: 1;
 }
-.app-pages-container .image-carousel {
+.image-carousel {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.app-pages-container .slider-container {
+.slider-container {
   width: 80%;
   max-width: 640px;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.app-pages-container .slider-text-content {
+.slider-text-content {
   text-align: start;
 }
-.app-pages-container .slider-text-content p {
+.slider-text-content p {
   font-size: 14px;
 }
-.app-pages-container .btn-prev, .app-pages-container .btn-next {
+.btn-prev, .btn-next {
   width: 32px;
   height: 32px;
   background-color: #E9E9E9;
@@ -164,14 +181,17 @@
   justify-content: center;
   align-items: center;
 }
-.app-pages-container .outer-position {
+.slider-button {
+  font-size: 24px;
+}
+.outer-position {
   position: relative;
   width: 100%;
   z-index: 1;
   overflow: hidden;
   margin: auto;
 }
-.app-pages-container .personalize-container {
+.personalize-container {
   position: relative;
   z-index: 1;
   padding-top: 2rem;
@@ -180,26 +200,26 @@
   margin-bottom: 1rem;
   overflow: hidden;
 }
-.app-pages-container .background {
+.background {
   position: absolute;
   z-index: 1;
-  top: 57%;
-  left: -4rem;
+  top: 50%;
+  left: -3rem;
   width: 200%;
   max-width: none;
 }
-.app-pages-container .personalize-container img {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.personalize-container img {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
   z-index: 3;
 }
-.app-pages-container .personalize-container h1 {
+.personalize-container h1 {
   line-height: 130%;
 }
-.app-pages-container .personalize-container p {
+.personalize-container p {
   font-size: 16px;
 }
-.app-pages-container .personalize-container .personalize-content-container {
+.personalize-container .personalize-content-container {
   flex-direction: column;
 }
 .sticky-nav {
@@ -229,87 +249,148 @@
   flex-direction: row;
 }
 @media screen and (min-width: 576px) {
-  .app-pages-container .title-container h1 {
+  .title-container h1 {
     font-size: 34px;
   }
-  .app-pages-container .badge-container a {
+  .content-container {
+    max-width: 390px;
+  }
+  .badge-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .badge-container a {
     width: auto;
   }
-  .app-pages-container .badge-container img {
+  .badge-container img {
     width: auto;
+  }
+  .video-container {
+    padding-bottom: 4rem;
+  }
+  .video-container .header {
+    justify-content: center;
   }
   .video-container .header-content h1 {
     font-size: 32px;
   }
   .video-container .header-content p {
     font-size: 18px;
+    max-width: 480px;
   }
-  .app-pages-container .video-player {
+  .video-player {
     min-height: 287px;
   }
-  .app-pages-container .slider-container {
+  .answers-container img {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .answers-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .answers-content-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .slider-container {
     max-width: 280px;
   }
-  .app-pages-container .background {
-    top: 54%;
-    left: -5rem;
-    width: 150%;
+  .carousel-image-container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .carousel-image-container img {
+    max-width: 200px;
+    align-self: center;
+  }
+  .background {
+    top: 50%;
+    left: -3rem;
+    width: 137%;
+  }
+  .personalize-container {
+    width: 100%;
+    padding: 2rem;
+  }
+  .personalize-content-container {
+    padding-bottom: 2rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .app-pages-container .badge-container {
+  .badge-container {
     display: flex;
     margin-bottom: 2rem;
   }
-  .app-pages-container .header {
+  .icon {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .app-pages-container > .header {
     display: flex;
     flex-direction: row;
     align-items: space-evenly;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
-  .app-pages-container .title-container h1 {
+  .container-padding {
+    padding: 2rem 0;
+  }
+  .title-container h1 {
     font-size: 26px;
   }
-  .app-pages-container .video-container h1 {
+  .video-container h1 {
     font-size: 22px;
   }
-  .app-pages-container .video-container p {
+  .video-container p {
     font-size: 16px;
     text-align: start;
   }
-  .app-pages-container .video-player {
+  .video-player {
     min-height: auto;
     max-width: 450px;
   }
-  .app-pages-container .video-container {
+  .video-container {
     justify-content: center;
     align-items: center;
   }
-  .app-pages-container .video-container .video-link {
+  .video-container .video-link {
     font-size: 16px;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
   }
-  .app-pages-container .video-container .header-content {
+  .video-container .header {
+    display: flex;
+    flex-direction: row;
+    align-items: space-evenly;
+  }
+  .video-container .header-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     padding-left: 1rem;
     order: 2;
   }
-  .app-pages-container .answers-container {
+  .answers-container {
     position: relative;
     width: 100%;
   }
-  .app-pages-container .answers-container .header {
+  .answers-container img {
+    padding: 2rem 0;
+  }
+  .answers-container .header {
     align-items: center;;
   }
-  .app-pages-container .answers-container .header-content {
+  .answers-container .header-content {
     width: 100vw;
     position: sticky;
     left: 1rem;
   }
-  .app-pages-container .answers-content-container {
+  .answers-content-container {
     max-width: 41%;
     display: flex;
     justify-content: center;
@@ -319,159 +400,201 @@
     left: 53%;
     bottom: 24%;
   }
-  .app-pages-container .outer-position {
+  .outer-position {
     width: auto;
     padding-left: 0px;
     padding-right: 0px;
   }
-  .app-pages-container .background {
-    left: -4rem;
-    width: 110%;
+  .background {
+    left: -2rem;
+    width: 105%;
+    top: 56%;
     z-index: 2;
   }
-  .app-pages-container .slider-container {
+  .slider-container {
     max-width: 600px;
   }
-  .app-pages-container .hero-image {
+  .hero-image {
     max-width: 330px;
   }
-  .app-pages-container .hero-image-container {
+  .hero-image-container {
     justify-content: center;
   }
-  .app-pages-container .carousel-image-container {
-    display: flex !important;
+  .carousel-image-container {
     align-items: center;
     justify-content: center;
+    flex-direction: row;
   }
-  .app-pages-container .carousel-image-container img {
+  .carousel-image-container img {
     max-width: 230px;
   }
-  .app-pages-container .carousel-image-container .slider-text-content {
+  .carousel-image-container .slider-text-content {
     padding-left: 1rem;
   }
-  .app-pages-container .personalize-container {
+  .personalize-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
   }
-  .app-pages-container .personalize-container {
+  .save-container {
+    padding-bottom: 4rem;
+  }
+  .personalize-container {
     z-index: 3;
+  }
+  .personalize-container img {
+    padding: 2rem;
+    margin: 0;
   }
 }
 @media screen and (min-width: 992px) {
-  .app-pages-container h1 {
+  h1 {
     font-size: 32px;  
   }
-  .app-pages-container h2 {
+  h2 {
     font-size: 20px;
   }
-  .app-pages-container p {
+  p {
     font-size: 18px;
   }
-  .app-pages-container ul > li {
+  ul > li {
     font-size: 18px;
   }
-  .app-pages-container .header {
+  .hero-image {
+    max-width: none;
+  }
+  .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .app-pages-container .header-content {
+  .app-pages-container > .header-content {
     display: flex;
     flex-direction: column;
     align-items: space-evenly;
     justify-content: center;
     text-align: start;
+    margin: 2rem 0;
   }
-  .app-pages-container .title-container h1 {
+  .container-padding {
+    padding: 3rem 0;
+  }
+  .title-container h1 {
     font-size: 30px;
   }
-  .app-pages-container .badge-container {
+  .badge-container {
     justify-content: space-between;
   }
-  .app-pages-container .badge-container div {
+  .badge-container div {
     padding: inherit;
   }
-  .app-pages-container .video-container .header-content {
+  .video-container .header-content {
     justify-content: space-evenly;
     padding: 1rem;
   }
-  .app-pages-container .video-container h1 {
+  .video-container h1 {
     font-size: 32px;
     text-align: start;
   }
-  .app-pages-container .video-container p {
+  .video-container p {
     font-size: 18px;
     text-align: start;
   }
-  .app-pages-container .video-container .video-link {
+  .video-container .video-link {
     text-align: start;
     font-size: 18px
   }
-  .app-pages-container .video-container .video-player {
+  .video-container .video-player {
     height: 253px;
   }
-  .app-pages-container .answers-container {
+  .answers-container {
     position: relative;
     width: 100%;
   }
-  .app-pages-container .answers-container .header {
+  .answers-container .header {
     align-items: center;;
   }
-  .app-pages-container .answers-container .header-content {
-    width: 95vw;
+  .answers-container .header-content {
+    width: 100vw;
     position: sticky;
     left: 1rem;
   }
-  .app-pages-container .answers-content-container {
-    max-width: 88%;
+  .answers-container .header-content img {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .answers-content-container {
+    max-width: 42%;
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
     position: absolute;
     left: 50%;
-    bottom: 29%;
+    bottom: 25%;
   }
-  .app-pages-container .image-carousel {
+  .image-carousel {
     width: 100%;
     justify-content: center;
   }
-  .app-pages-container .carousel-image-container {
+  .carousel-image-container {
     display: flex !important;
     align-items: center;
     justify-content: center;
   }
-  .app-pages-container .carousel-image-container .slider-text-content {
+  .carousel-image-container .slider-text-content {
     padding-left: 1rem;
   }
-  .app-pages-container .carousel-image {
+  .carousel-image {
     max-height: 427px;
     width: auto;
   }
-  .app-pages-container .save-container .save-container-content {
+  .save-container .save-container-content {
     max-width: 100%;
   }
-  .app-pages-container .background {
-    left: 0rem;
-    width: 100%;
+  .save-container {
+    padding-bottom: 4rem;
+  }
+  .background {
+    left: -2rem;
+    width: 106%;
     top: 51%;
   }
-  .app-pages-container .slider-container {
+  .slider-container {
     max-width: 600px;
   }
-  .app-pages-container .slider-text-content p {
+  .slider-text-content p {
     font-size: 16px;
   }
-  .app-pages-container .hero-image {
-    max-width: 330px;
+  .slider-button {
+    font-size: 32px;
+  }
+  .btn-prev, .btn-next {
+    width: 40px;
+    height: 40px;
+  }
+  .personalize-container {
+    padding: 4rem;
+  }
+  .personalize-container p {
+    font-size: 16px;
+    max-width: 70%;
   }
 }
 @media screen and (min-width: 1440px) {
-  .app-pages-container .background {
+  .background {
     left: 0rem;
     width: 100%;
     top: 41%;
+  }
+  .app-pages-container > .header > .header-content {
+    margin: auto;
+  }
+  .video-player {
+    justify-content: center;
+  }
+  .answers-content-container {
+    bottom: 38%
   }
 }
